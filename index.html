@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lorenz Eckl — Industrial Designer</title>
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<div class="page page--home">
+
+  <div id="top" class="hero">
+    <nav class="nav">
+      <a href="#top" class="nav-logo" data-nav-logo>Lorenz Eckl</a>
+      <div class="nav-links" data-rs="nav-links">
+        <a href="#projekte" class="nav-link">Projekte</a>
+        <a href="#ueber-mich" class="nav-link">Über mich</a>
+        <a href="#kontakt" class="nav-link">Kontakt</a>
+      </div>
+      <div class="nav-burger" data-nav-burger role="button" aria-label="Menu" tabindex="0" data-rs="nav-burger">
+        <span class="nav-burger-bar nav-burger-bar--top"></span>
+        <span class="nav-burger-bar nav-burger-bar--middle"></span>
+        <span class="nav-burger-bar nav-burger-bar--bottom"></span>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" data-mobile-menu>
+      <a href="#projekte">Projekte</a>
+      <a href="#ueber-mich">Über mich</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+
+    <div class="nav-spacer"></div>
+    <img data-hero-image src="/assets/images/lp-hero.jpg" alt="Hero" class="hero-image">
+    <div class="hero-headline-row">
+      <p class="hero-headline" data-hero-headline></p>
+    </div>
+  </div>
+
+  <div id="projekte" class="section">
+    <div class="split" data-rs="split">
+      <h2 class="section-title" data-work-heading>Selected Work</h2>
+      <p class="section-body" data-work-intro></p>
+    </div>
+
+    <div class="project-list" data-project-list></div>
+  </div>
+
+  <div id="ueber-mich" class="section">
+    <div class="split" data-rs="split">
+      <h2 class="section-title section-title--about" data-about-heading>About Me</h2>
+      <div class="about-body-col">
+        <p class="section-body" data-about-bio></p>
+        <div class="skills-row">
+          <span class="skills-label" data-about-skills-label>Skills:</span>
+          <div class="tag-row" data-about-skills-list></div>
+        </div>
+      </div>
+    </div>
+    <div class="about-imgs" data-about-imgs data-rs="about-imgs"></div>
+  </div>
+
+  <div id="kontakt" class="contact">
+    <div class="contact-row">
+      <p class="contact-headline">
+        <span class="label" data-contact-heading>Get in Touch</span><br>
+        <a href="mailto:hello@lorenz-eckl.com" class="mail-link" data-contact-email>
+          <span class="mail-arrow">→&nbsp;</span><span class="mail-text" data-contact-email-text>hello@lorenz-eckl.com</span>
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="footer-name" data-footer-name>Lorenz Eckl → AUT, Wien</span>
+    <div class="footer-links">
+      <a href="#" data-footer-impressum>Impressum</a>
+      <a href="#" data-footer-datenschutz>Datenschutz</a>
+    </div>
+  </div>
+
+</div>
+
+<script src="assets/js/content.js"></script>
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/home.js"></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  // Lets Netlify Identity invite/reset-password links (which land on the
+  // homepage) hand off into the /admin login flow.
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function (user) {
+      if (!user) {
+        window.netlifyIdentity.on("login", function () {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>

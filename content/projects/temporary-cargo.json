@@ -1,0 +1,33 @@
+{
+  "slug": "temporary-cargo",
+  "eyebrow": "Temporary Cargo",
+  "headline": "A bicycle trailer that is always there when you need it.",
+  "keywordsLabel": "Keywords",
+  "keywords": ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"],
+  "specsLabel": "Eckdaten",
+  "specs": ["Solo Project", "2026"],
+  "heroImage": "/assets/images/cs-hero.jpg",
+  "problem": {
+    "heading": "The Problem",
+    "body": "Conventional trailers require storage, preparation and a separate attachment process. This makes them impractical for spontaneous everyday transport. There had to be a better way."
+  },
+  "idea": {
+    "heading": "The Idea",
+    "body": "I wanted to combine a rear carrier and a trailer in one structure.<br><br>So I started planning ..."
+  },
+  "gallery": [
+    { "type": "full", "image": "/assets/images/cs-monitor.jpg", "image2": "", "caption": "", "videoLabel": "", "videoUrl": "" },
+    { "type": "pair", "image": "/assets/images/cs-desktools.jpg", "image2": "/assets/images/cs-workbench.jpg", "caption": "The main challenge was to figure out the folding mechanism.", "videoLabel": "", "videoUrl": "" },
+    { "type": "pair", "image": "/assets/images/cs-jig.jpg", "image2": "/assets/images/cs-clamp.jpg", "caption": "The Frame is made of lightweight alluminium for easy transport.", "videoLabel": "", "videoUrl": "" },
+    { "type": "pair", "image": "/assets/images/cs-bracket.jpg", "image2": "/assets/images/cs-welding.jpg", "caption": "Thorough limit testing to find the right balance between weight and stability.", "videoLabel": "", "videoUrl": "" },
+    { "type": "video", "image": "/assets/images/cs-bikeside.jpg", "image2": "", "caption": "", "videoLabel": "Faltvideo", "videoUrl": "" },
+    { "type": "pair", "image": "/assets/images/cs-person.jpg", "image2": "/assets/images/cs-trailer.jpg", "caption": "Links der Gepäckträger Modus, rechts der Anhänger", "videoLabel": "", "videoUrl": "" },
+    { "type": "pair", "image": "/assets/images/cs-grocery.jpg", "image2": "/assets/images/cs-cyclist.jpg", "caption": "My first trip to Spar", "videoLabel": "", "videoUrl": "" },
+    { "type": "pair", "image": "/assets/images/cs-auditorium.jpg", "image2": "/assets/images/cs-crate.jpg", "caption": "", "videoLabel": "", "videoUrl": "" }
+  ],
+  "result": {
+    "heading": "The Result",
+    "bodyBlack": "The Result is an everyday product, that doubles as a gepäcktrager and a trailor while remaining light and visually restrained.",
+    "bodyMuted": "When not in use, it follows the silhouette of the bicycle and remains visually unobtrusive. When deployed, the structure extends behind the bicycle and functions as a narrow single-wheel trailer."
+  }
+}

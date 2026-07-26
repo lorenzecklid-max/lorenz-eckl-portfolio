@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "image": "/assets/images/lp-hero.jpg",
+    "prefix": "Industrial Designer mit Fokus auf",
+    "accent": "Lorem Ipsum, Lorem Ipsum, Lorem Ipsum",
+    "suffix": "Abschluss Universität für angewandte Kunst Wien, 2026."
+  },
+  "work": {
+    "heading": "Selected Work",
+    "intro": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,"
+  },
+  "projects": [
+    {
+      "slug": "temporary-cargo",
+      "title": "Speedclap",
+      "tagline": "The flexible bike trailor",
+      "image": "/assets/images/lp-speedclap.jpg",
+      "tags": [
+        { "label": "Urban Mobility", "variant": "dark" },
+        { "label": "Lorem Ipsum", "variant": "muted" },
+        { "label": "Lorem Ipsum", "variant": "muted" }
+      ]
+    },
+    {
+      "slug": "super-commuter",
+      "title": "Super Commuter",
+      "tagline": "The world smallest roller",
+      "image": "/assets/images/lp-supercommuter.jpg",
+      "tags": [
+        { "label": "Urban Mobility", "variant": "dark" },
+        { "label": "Lorem Ipsum", "variant": "muted" },
+        { "label": "Lorem Ipsum", "variant": "muted" }
+      ]
+    },
+    {
+      "slug": "terra",
+      "title": "Terra",
+      "tagline": "Urban Cooling Spot",
+      "image": "/assets/images/lp-terra.jpg",
+      "tags": [
+        { "label": "Sustainability", "variant": "gold" },
+        { "label": "Lorem Ipsum", "variant": "muted" },
+        { "label": "Lorem Ipsum", "variant": "muted" }
+      ]
+    }
+  ],
+  "about": {
+    "heading": "About Me",
+    "portraitImage": "/assets/images/lp-portrait.jpg",
+    "secondImage": "",
+    "bio": "Ich gestalte Produkte an der Schnittstelle von Mensch, Technik und Fertigung. Mich interessiert, wie Geräte im professionellen Alltag wirklich benutzt werden – und wie Design Komplexität reduzieren kann. Ausgebildet an der Universität für angewandte Kunst Wien, mit Stationen in Modellbau und CMF-Design.",
+    "skillsLabel": "Skills:",
+    "skills": ["Rhino", "Fusion 360", "KeyShot", "CMF"]
+  },
+  "contact": {
+    "heading": "Get in Touch"
+  }
+}

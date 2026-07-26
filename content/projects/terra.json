@@ -1,0 +1,28 @@
+{
+  "slug": "terra",
+  "eyebrow": "Terra",
+  "headline": "An urban cooling spot for public spaces in a warming city.",
+  "keywordsLabel": "Keywords",
+  "keywords": ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"],
+  "specsLabel": "Eckdaten",
+  "specs": ["Kooperationsprojekt", "2024"],
+  "heroImage": "",
+  "problem": {
+    "heading": "The Problem",
+    "body": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+  },
+  "idea": {
+    "heading": "The Idea",
+    "body": "Sed diam voluptua, at vero eos et accusam et justo duo dolores et ea rebum.<br><br>Stet clita kasd gubergren, no sea takimata sanctus est."
+  },
+  "gallery": [
+    { "type": "full", "image": "", "image2": "", "caption": "", "videoLabel": "", "videoUrl": "" },
+    { "type": "pair", "image": "", "image2": "", "caption": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.", "videoLabel": "", "videoUrl": "" },
+    { "type": "pair", "image": "", "image2": "", "caption": "Sed diam nonumy eirmod tempor invidunt ut labore et dolore.", "videoLabel": "", "videoUrl": "" }
+  ],
+  "result": {
+    "heading": "The Result",
+    "bodyBlack": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.",
+    "bodyMuted": "Ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+  }
+}

@@ -1,0 +1,321 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Netlify Identity handles login; Git Gateway commits the edits your friend
+# makes here straight back into this repo. No servers, no database.
+publish_mode: simple
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - file: "content/settings.json"
+        label: "Settings"
+        name: "settings"
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "City / Country (footer)", name: "location", widget: "string" }
+          - { label: "Contact email", name: "email", widget: "string" }
+          - label: "Footer links"
+            name: "links"
+            widget: "object"
+            fields:
+              - label: "Impressum"
+                name: "impressum"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Link (URL, or # for none yet)", name: "href", widget: "string" }
+              - label: "Datenschutz"
+                name: "datenschutz"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Link (URL, or # for none yet)", name: "href", widget: "string" }
+
+  - name: "home"
+    label: "Landing Page"
+    files:
+      - file: "content/home.json"
+        label: "Landing Page"
+        name: "home"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Hero image", name: "image", widget: "image" }
+              - { label: "Headline — text before the highlight", name: "prefix", widget: "string" }
+              - { label: "Headline — highlighted part", name: "accent", widget: "string" }
+              - { label: "Headline — text after the highlight", name: "suffix", widget: "string" }
+          - label: "Selected Work — intro"
+            name: "work"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Intro paragraph", name: "intro", widget: "text" }
+          - label: "Project teasers"
+            name: "projects"
+            widget: "list"
+            min: 3
+            max: 3
+            summary: "{{title}} — {{tagline}}"
+            fields:
+              - label: "Linked project page"
+                name: "slug"
+                widget: "select"
+                hint: "Which project page this teaser opens. Only change if you know what you're doing."
+                options:
+                  - { label: "Temporary Cargo", value: "temporary-cargo" }
+                  - { label: "Super Commuter", value: "super-commuter" }
+                  - { label: "Terra", value: "terra" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "One-liner", name: "tagline", widget: "string" }
+              - { label: "Teaser image", name: "image", widget: "image" }
+              - label: "Tags / labels"
+                name: "tags"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - label: "Style"
+                    name: "variant"
+                    widget: "select"
+                    options:
+                      - { label: "Dark pill", value: "dark" }
+                      - { label: "Grey pill", value: "muted" }
+                      - { label: "Gold pill", value: "gold" }
+          - label: "About Me"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Portrait photo", name: "portraitImage", widget: "image" }
+              - label: "Second image"
+                name: "secondImage"
+                widget: "image"
+                required: false
+                hint: "Leave empty to keep the grey placeholder tile."
+              - { label: "Bio text", name: "bio", widget: "text" }
+              - { label: "Skills label", name: "skillsLabel", widget: "string" }
+              - label: "Skills"
+                name: "skills"
+                widget: "list"
+                field: { label: "Skill", name: "skill", widget: "string" }
+          - label: "Get in Touch"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+
+  - name: "projects"
+    label: "Project Pages"
+    files:
+      - file: "content/projects/temporary-cargo.json"
+        label: "Temporary Cargo"
+        name: "temporary-cargo"
+        fields:
+          - { label: "Eyebrow (small title above headline)", name: "eyebrow", widget: "string" }
+          - { label: "Headline", name: "headline", widget: "string" }
+          - { label: "Keywords label", name: "keywordsLabel", widget: "string" }
+          - label: "Keywords"
+            name: "keywords"
+            widget: "list"
+            field: { label: "Keyword", name: "keyword", widget: "string" }
+          - { label: "Specs / Eckdaten label", name: "specsLabel", widget: "string" }
+          - label: "Specs / Eckdaten"
+            name: "specs"
+            widget: "list"
+            field: { label: "Spec", name: "spec", widget: "string" }
+          - label: "Hero image"
+            name: "heroImage"
+            widget: "image"
+            required: false
+            hint: "Leave empty to show a grey placeholder."
+          - label: "The Problem"
+            name: "problem"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body text", name: "body", widget: "text" }
+          - label: "The Idea"
+            name: "idea"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body text (use a blank line for a paragraph break)", name: "body", widget: "text" }
+          - label: "Image gallery / process story"
+            name: "gallery"
+            widget: "list"
+            summary: "{{type}} — {{caption}}"
+            fields:
+              - label: "Block type"
+                name: "type"
+                widget: "select"
+                options:
+                  - { label: "One full-width image", value: "full" }
+                  - { label: "Two images side by side", value: "pair" }
+                  - { label: "Video", value: "video" }
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                required: false
+                hint: "For 'Video' blocks this is an optional still image shown below the video."
+              - label: "Second image (only for 'two images side by side')"
+                name: "image2"
+                widget: "image"
+                required: false
+              - { label: "Caption (optional, shown in italics)", name: "caption", widget: "string", required: false }
+              - { label: "Video placeholder label (only used while videoUrl is empty)", name: "videoLabel", widget: "string", required: false }
+              - label: "Video URL (only for 'Video' blocks)"
+                name: "videoUrl"
+                widget: "string"
+                required: false
+                hint: "Paste a YouTube/Vimeo embed link. Leave empty to show a placeholder box instead."
+          - label: "The Result"
+            name: "result"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body text (black)", name: "bodyBlack", widget: "text" }
+              - { label: "Body text (grey)", name: "bodyMuted", widget: "text" }
+
+      - file: "content/projects/super-commuter.json"
+        label: "Super Commuter"
+        name: "super-commuter"
+        fields:
+          - { label: "Eyebrow (small title above headline)", name: "eyebrow", widget: "string" }
+          - { label: "Headline", name: "headline", widget: "string" }
+          - { label: "Keywords label", name: "keywordsLabel", widget: "string" }
+          - label: "Keywords"
+            name: "keywords"
+            widget: "list"
+            field: { label: "Keyword", name: "keyword", widget: "string" }
+          - { label: "Specs / Eckdaten label", name: "specsLabel", widget: "string" }
+          - label: "Specs / Eckdaten"
+            name: "specs"
+            widget: "list"
+            field: { label: "Spec", name: "spec", widget: "string" }
+          - label: "Hero image"
+            name: "heroImage"
+            widget: "image"
+            required: false
+            hint: "Leave empty to show a grey placeholder."
+          - label: "The Problem"
+            name: "problem"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body text", name: "body", widget: "text" }
+          - label: "The Idea"
+            name: "idea"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body text (use a blank line for a paragraph break)", name: "body", widget: "text" }
+          - label: "Image gallery / process story"
+            name: "gallery"
+            widget: "list"
+            summary: "{{type}} — {{caption}}"
+            fields:
+              - label: "Block type"
+                name: "type"
+                widget: "select"
+                options:
+                  - { label: "One full-width image", value: "full" }
+                  - { label: "Two images side by side", value: "pair" }
+                  - { label: "Video", value: "video" }
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                required: false
+                hint: "For 'Video' blocks this is an optional still image shown below the video."
+              - label: "Second image (only for 'two images side by side')"
+                name: "image2"
+                widget: "image"
+                required: false
+              - { label: "Caption (optional, shown in italics)", name: "caption", widget: "string", required: false }
+              - { label: "Video placeholder label (only used while videoUrl is empty)", name: "videoLabel", widget: "string", required: false }
+              - label: "Video URL (only for 'Video' blocks)"
+                name: "videoUrl"
+                widget: "string"
+                required: false
+                hint: "Paste a YouTube/Vimeo embed link. Leave empty to show a placeholder box instead."
+          - label: "The Result"
+            name: "result"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body text (black)", name: "bodyBlack", widget: "text" }
+              - { label: "Body text (grey)", name: "bodyMuted", widget: "text" }
+
+      - file: "content/projects/terra.json"
+        label: "Terra"
+        name: "terra"
+        fields:
+          - { label: "Eyebrow (small title above headline)", name: "eyebrow", widget: "string" }
+          - { label: "Headline", name: "headline", widget: "string" }
+          - { label: "Keywords label", name: "keywordsLabel", widget: "string" }
+          - label: "Keywords"
+            name: "keywords"
+            widget: "list"
+            field: { label: "Keyword", name: "keyword", widget: "string" }
+          - { label: "Specs / Eckdaten label", name: "specsLabel", widget: "string" }
+          - label: "Specs / Eckdaten"
+            name: "specs"
+            widget: "list"
+            field: { label: "Spec", name: "spec", widget: "string" }
+          - label: "Hero image"
+            name: "heroImage"
+            widget: "image"
+            required: false
+            hint: "Leave empty to show a grey placeholder."
+          - label: "The Problem"
+            name: "problem"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body text", name: "body", widget: "text" }
+          - label: "The Idea"
+            name: "idea"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body text (use a blank line for a paragraph break)", name: "body", widget: "text" }
+          - label: "Image gallery / process story"
+            name: "gallery"
+            widget: "list"
+            summary: "{{type}} — {{caption}}"
+            fields:
+              - label: "Block type"
+                name: "type"
+                widget: "select"
+                options:
+                  - { label: "One full-width image", value: "full" }
+                  - { label: "Two images side by side", value: "pair" }
+                  - { label: "Video", value: "video" }
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                required: false
+                hint: "For 'Video' blocks this is an optional still image shown below the video."
+              - label: "Second image (only for 'two images side by side')"
+                name: "image2"
+                widget: "image"
+                required: false
+              - { label: "Caption (optional, shown in italics)", name: "caption", widget: "string", required: false }
+              - { label: "Video placeholder label (only used while videoUrl is empty)", name: "videoLabel", widget: "string", required: false }
+              - label: "Video URL (only for 'Video' blocks)"
+                name: "videoUrl"
+                widget: "string"
+                required: false
+                hint: "Paste a YouTube/Vimeo embed link. Leave empty to show a placeholder box instead."
+          - label: "The Result"
+            name: "result"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body text (black)", name: "bodyBlack", widget: "text" }
+              - { label: "Body text (grey)", name: "bodyMuted", widget: "text" }
