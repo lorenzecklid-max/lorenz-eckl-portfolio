@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+  @font-face {
+    font-family: 'Helvetica Neue';
+    src: url('./fonts/HelveticaNeueBold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Helvetica Neue';
+    src: url('./fonts/HelveticaNeueMediumItalic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+  }
+  html, body { margin: 0; background: #fff; }
+  a { color: #000; text-decoration: none; }
+  a:hover { color: rgb(108,108,108); }
+  ::selection { background: rgb(217,217,217); }
+  img { display: block; }
+  .checker {
+    background-image:
+      linear-gradient(45deg, rgb(238,238,238) 25%, transparent 25%, transparent 75%, rgb(238,238,238) 75%, rgb(238,238,238)),
+      linear-gradient(45deg, rgb(238,238,238) 25%, transparent 25%, transparent 75%, rgb(238,238,238) 75%, rgb(238,238,238));
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 50px;
+    background-color: rgb(250,250,250);
+  }
+  @media (max-width: 900px) {
+    [data-rs="split"] { grid-template-columns: 1fr !important; gap: 32px !important; }
+  }
+  @media (max-width: 640px) {
+    [data-rs="gallery"] { grid-template-columns: 1fr !important; }
+  }
+</style>
+</helmet>
+
+<div style="width:100%;max-width:1800px;margin:0 auto;background:#fff;box-sizing:border-box;display:flex;flex-direction:column;gap:clamp(60px,10vw,160px);padding:clamp(60px,10vw,160px) clamp(20px,8vw,160px) clamp(20px,3vw,32px) clamp(20px,8vw,160px);align-items:flex-start;font-family:&quot;Helvetica Neue&quot;,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,Arial,sans-serif;letter-spacing:-0.04em;">
+
+  <div style="display:flex;flex-direction:column;gap:clamp(40px,6vw,80px);align-items:flex-start;align-self:stretch;">
+    <p style="align-self:stretch;font-weight:700;font-size:clamp(32px,7vw,65px);line-height:0.95;letter-spacing:-0.04em;margin:0;"><span style="color:rgb(136,136,136);">Temporary Cargo</span><br /><span style="color:#000;">A bicycle trailer that is always there when you need it.</span></p>
+    <div data-rs="split" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:start;align-self:stretch;">
+      <div style="display:flex;flex-direction:column;gap:16px;justify-content:center;align-items:flex-start;">
+        <span style="font-weight:500;font-size:20px;line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">Keywords</span>
+        <div style="display:flex;flex-direction:row;flex-wrap:wrap;gap:4px;align-items:flex-start;">
+          <span style="border-radius:2px;background:rgb(244,244,244);padding:8px 12px;font-weight:500;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">Lorem Ipsum</span>
+          <span style="border-radius:2px;background:rgb(244,244,244);padding:8px 12px;font-weight:500;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">Lorem Ipsum</span>
+          <span style="border-radius:2px;background:rgb(244,244,244);padding:8px 12px;font-weight:500;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">Lorem Ipsum</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;justify-content:center;align-items:flex-start;">
+        <span style="font-weight:500;font-size:20px;line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">Eckdaten</span>
+        <div style="display:flex;flex-direction:row;flex-wrap:wrap;gap:4px;align-items:flex-start;">
+          <span style="border-radius:2px;background:rgb(244,244,244);padding:8px 12px;font-weight:500;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">Solo Project</span>
+          <span style="border-radius:2px;background:rgb(244,244,244);padding:8px 12px;font-weight:500;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <img src="images/cs-hero.jpg" alt="Temporary Cargo hero" style="width:100%;aspect-ratio:1600/859.425;border-radius:4px;object-fit:cover;align-self:stretch;" />
+
+  <div data-rs="split" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:start;align-self:stretch;">
+    <h2 style="font-weight:700;font-size:clamp(24px,4vw,40px);line-height:0.95;letter-spacing:-0.04em;color:rgb(136,136,136);margin:0;">The Problem</h2>
+    <p style="font-weight:700;font-size:clamp(24px,4vw,40px);line-height:0.95;letter-spacing:-0.04em;color:rgb(136,136,136);margin:0;">Conventional trailers require storage, preparation and a separate attachment process. This makes them impractical for spontaneous everyday transport. There had to be a better way.</p>
+  </div>
+
+  <div data-rs="split" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:start;align-self:stretch;">
+    <h2 style="font-weight:700;font-size:clamp(24px,4vw,40px);line-height:0.95;letter-spacing:-0.04em;color:rgb(136,136,136);margin:0;">The Idea</h2>
+    <p style="font-weight:700;font-size:clamp(24px,4vw,40px);line-height:0.95;letter-spacing:-0.04em;color:#000;margin:0;">I wanted to combine a rear carrier and a trailer in one structure.<br /><br />So I started planning ...</p>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:24px;align-items:flex-start;align-self:stretch;">
+    <div style="display:flex;flex-direction:column;gap:16px;align-items:flex-start;align-self:stretch;">
+      <img src="images/cs-monitor.jpg" alt="CAD screen" style="width:100%;aspect-ratio:1600/814;border-radius:4px;object-fit:cover;align-self:stretch;" />
+      <div data-rs="gallery" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:start;align-self:stretch;">
+        <img src="images/cs-desktools.jpg" alt="Sketches and tools" style="width:100%;aspect-ratio:796/814;border-radius:4px;object-fit:cover;" />
+        <img src="images/cs-workbench.jpg" alt="Aluminium parts" style="width:100%;aspect-ratio:796/814;border-radius:4px;object-fit:cover;" />
+      </div>
+    </div>
+    <span style="font-weight:500;font-style:italic;font-size:20px;line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">The main challenge was to figure out the folding mechanism.</span>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:24px;align-items:flex-start;align-self:stretch;">
+    <div data-rs="gallery" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:start;align-self:stretch;">
+      <img src="images/cs-jig.jpg" alt="Welding jig" style="width:100%;aspect-ratio:796/814;border-radius:4px;object-fit:cover;" />
+      <img src="images/cs-clamp.jpg" alt="Bending clamp" style="width:100%;aspect-ratio:796/814;border-radius:4px;object-fit:cover;" />
+    </div>
+    <span style="font-weight:500;font-style:italic;font-size:20px;line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">The Frame is made of lightweight alluminium for easy transport.</span>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:24px;align-items:flex-start;align-self:stretch;">
+    <div data-rs="gallery" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:start;align-self:stretch;">
+      <img src="images/cs-bracket.jpg" alt="Frame in hand" style="width:100%;aspect-ratio:796/890.174;border-radius:4px;object-fit:cover;" />
+      <img src="images/cs-welding.jpg" alt="Welding frame" style="width:100%;aspect-ratio:796/890.174;border-radius:4px;object-fit:cover;" />
+    </div>
+    <span style="font-weight:500;font-style:italic;font-size:20px;line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">Thorough limit testing to find the right balance between weight and stability.</span>
+  </div>
+
+  <div data-rs="split" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:start;align-self:stretch;">
+    <h2 style="font-weight:700;font-size:clamp(24px,4vw,40px);line-height:0.95;letter-spacing:-0.04em;color:rgb(136,136,136);margin:0;">The Result</h2>
+    <p style="font-weight:700;font-size:clamp(24px,4vw,40px);line-height:0.95;letter-spacing:-0.04em;margin:0;"><span style="color:#000;">The Result is an everyday product, that doubles as a gepäcktrager and a trailor while remaining light and visually restrained.</span><br /><br /><span style="color:rgb(136,136,136);">When not in use, it follows the silhouette of the bicycle and remains visually unobtrusive. When deployed, the structure extends behind the bicycle and functions as a narrow single-wheel trailer.</span></p>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start;align-self:stretch;">
+    <div class="checker" style="width:100%;aspect-ratio:1600/814;border-radius:4px;display:flex;justify-content:center;align-items:center;align-self:stretch;">
+      <span style="font-weight:700;font-size:clamp(24px,4vw,40px);line-height:0.95;letter-spacing:-0.04em;color:rgb(120,120,120);">Faltvideo</span>
+    </div>
+    <img src="images/cs-bikeside.jpg" alt="Trailer deployed" style="width:100%;aspect-ratio:1600/814;border-radius:4px;object-fit:cover;align-self:stretch;" />
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:24px;align-items:flex-start;align-self:stretch;">
+    <div data-rs="gallery" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:start;align-self:stretch;">
+      <img src="images/cs-person.jpg" alt="Rack mode" style="width:100%;aspect-ratio:796/814;border-radius:4px;object-fit:cover;" />
+      <img src="images/cs-trailer.jpg" alt="Trailer mode" style="width:100%;aspect-ratio:796/814;border-radius:4px;object-fit:cover;" />
+    </div>
+    <span style="font-weight:500;font-style:italic;font-size:20px;line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">Links der Gepäckträger Modus, rechts der Anhänger</span>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:24px;align-items:flex-start;align-self:stretch;">
+    <div data-rs="gallery" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:start;align-self:stretch;">
+      <img src="images/cs-grocery.jpg" alt="Groceries" style="width:100%;aspect-ratio:796/814;border-radius:4px;object-fit:cover;" />
+      <img src="images/cs-cyclist.jpg" alt="Riding" style="width:100%;aspect-ratio:796/814;border-radius:4px;object-fit:cover;" />
+    </div>
+    <span style="font-weight:500;font-style:italic;font-size:20px;line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">My first trip to Spar</span>
+  </div>
+
+  <div data-rs="gallery" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:start;align-self:stretch;">
+    <img src="images/cs-auditorium.jpg" alt="Auditorium" style="width:100%;aspect-ratio:796/814;border-radius:4px;object-fit:cover;" />
+    <img src="images/cs-crate.jpg" alt="Crate" style="width:100%;aspect-ratio:796/814;border-radius:4px;object-fit:cover;" />
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:32px;align-items:flex-start;align-self:stretch;">
+    <h2 style="font-weight:700;font-size:clamp(24px,4vw,40px);line-height:0.95;letter-spacing:-0.04em;color:#000;margin:0;align-self:stretch;">Weitere Projeke</h2>
+    <div data-rs="gallery" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:start;align-self:stretch;">
+      <a href="Portfolio Landing.dc.html#projekte" style="display:flex;flex-direction:column;gap:16px;align-items:flex-start;">
+        <img src="images/cs-thumb.jpg" alt="Lorem Ipsum" style="width:100%;aspect-ratio:796/429;border-radius:4px;object-fit:cover;align-self:stretch;" />
+        <span style="align-self:stretch;font-weight:700;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:rgb(136,136,136);">Lorem Ipsum</span>
+      </a>
+      <a href="Portfolio Landing.dc.html#projekte" style="display:flex;flex-direction:column;gap:16px;align-items:flex-start;">
+        <img src="images/cs-thumb.jpg" alt="Lorem Ipsum" style="width:100%;aspect-ratio:796/429;border-radius:4px;object-fit:cover;align-self:stretch;" />
+        <span style="align-self:stretch;font-weight:700;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:rgb(136,136,136);">Lorem Ipsum</span>
+      </a>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid #000;display:flex;flex-direction:column;gap:clamp(60px,10vw,120px);padding:32px 0px;align-items:flex-start;align-self:stretch;box-sizing:border-box;">
+    <p style="flex-grow:1;font-weight:700;font-size:clamp(32px,7vw,65px);line-height:0.95;letter-spacing:-0.04em;margin:0;align-self:stretch;"><span style="color:#000;">Get in Touch</span><br /><a href="mailto:hello@lorenz-eckl.com" style="color:rgb(108,108,108);">hello@lorenz-eckl.com</a></p>
+  </div>
+
+  <div style="display:flex;flex-direction:row;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;align-self:stretch;">
+    <a href="Portfolio Landing.dc.html" style="font-weight:700;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:#000;">Lorenz Eckl → AUT, Wien</a>
+    <div style="display:flex;flex-direction:row;gap:40px;align-items:center;">
+      <a href="#" style="font-weight:700;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:#000;">Impressum</a>
+      <a href="#" style="font-weight:700;font-size:16px;line-height:100%;color:#000;">Datenschutz</a>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

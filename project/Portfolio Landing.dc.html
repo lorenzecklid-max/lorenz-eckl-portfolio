@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+  @font-face {
+    font-family: 'Helvetica Neue';
+    src: url('./fonts/HelveticaNeueBold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Helvetica Neue';
+    src: url('./fonts/HelveticaNeueMediumItalic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+  }
+  html, body { margin: 0; background: #fff; }
+  html { scroll-behavior: smooth; }
+  a { color: #000; text-decoration: none; }
+  a:hover { color: rgb(108,108,108); }
+  ::selection { background: rgb(217,217,217); }
+  img { display: block; }
+  @media (max-width: 900px) {
+    [data-rs="split"] { grid-template-columns: 1fr !important; gap: 32px !important; }
+    [data-rs="nav-links"] { display: none !important; }
+    [data-rs="nav-burger"] { display: flex !important; }
+    [data-rs="about-imgs"] { gap: 4px !important; }
+  }
+</style>
+</helmet>
+
+<div style="width:100%;max-width:1800px;margin:0 auto;background:#fff;box-sizing:border-box;display:flex;flex-direction:column;gap:clamp(80px,12vw,240px);padding:clamp(20px,4vw,40px) clamp(20px,8vw,160px) clamp(20px,3vw,32px) clamp(20px,8vw,160px);align-items:flex-start;font-family:&quot;Helvetica Neue&quot;,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,Arial,sans-serif;letter-spacing:-0.04em;">
+
+  <div id="top" data-name="Hero Section" style="position:relative;display:flex;flex-direction:column;gap:clamp(40px,6vw,80px);justify-content:center;align-items:center;align-self:stretch;">
+    <nav style="position:fixed;top:24px;left:0;right:0;z-index:40;width:100%;max-width:1800px;margin:0 auto;padding:12px clamp(20px,8vw,160px);box-sizing:border-box;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;">
+      <a href="#top" style="font-weight:700;font-size:clamp(22px,3vw,30px);line-height:100%;color:{{ logoColor }};transition:color 0.2s ease;">Lorenz Eckl</a>
+      <div data-rs="nav-links" style="display:flex;flex-direction:row;flex-wrap:wrap;gap:4px;align-items:center;">
+        <a href="#projekte" style="font-weight:700;font-size:clamp(13.5px,1.8vw,18px);line-height:100%;color:#000;backdrop-filter:blur(12px) saturate(160%);-webkit-backdrop-filter:blur(12px) saturate(160%);background:rgba(255,255,255,0.55);border-radius:2px;padding:10px 16px;transition:background 0.2s ease, color 0.2s ease;" style-hover="background:rgba(220,220,220,0.7);color:rgb(90,90,90) !important;">Projekte</a>
+        <a href="#ueber-mich" style="font-weight:700;font-size:clamp(13.5px,1.8vw,18px);line-height:100%;color:#000;backdrop-filter:blur(12px) saturate(160%);-webkit-backdrop-filter:blur(12px) saturate(160%);background:rgba(255,255,255,0.55);border-radius:2px;padding:10px 16px;transition:background 0.2s ease, color 0.2s ease;" style-hover="background:rgba(220,220,220,0.7);color:rgb(90,90,90) !important;">Über mich</a>
+        <a href="#kontakt" style="font-weight:700;font-size:clamp(13.5px,1.8vw,18px);line-height:100%;color:#000;backdrop-filter:blur(12px) saturate(160%);-webkit-backdrop-filter:blur(12px) saturate(160%);background:rgba(255,255,255,0.55);border-radius:2px;padding:10px 16px;transition:background 0.2s ease, color 0.2s ease;" style-hover="background:rgba(220,220,220,0.7);color:rgb(90,90,90) !important;">Kontakt</a>
+      </div>
+      <div data-rs="nav-burger" onClick="{{ onToggleMenu }}" role="button" aria-label="Menu" tabIndex="0" style="display:none;align-items:center;justify-content:center;width:44px;height:44px;padding:0;background:none;cursor:pointer;box-sizing:border-box;position:relative;z-index:31;">
+        <span style="display:block;width:24px;height:2px;background:{{ burgerColor }};transition:transform 0.25s ease, opacity 0.2s ease;transform:{{ barTopTransform }};opacity:{{ barTopOpacity }};position:absolute;"></span>
+        <span style="display:block;width:24px;height:2px;background:{{ burgerColor }};position:absolute;"></span>
+        <span style="display:block;width:24px;height:2px;background:{{ burgerColor }};transition:transform 0.25s ease, opacity 0.2s ease;transform:{{ barBottomTransform }};opacity:{{ barBottomOpacity }};position:absolute;"></span>
+      </div>
+    </nav>
+    <div style="display:{{ mobileMenuDisplay }};flex-direction:column;justify-content:flex-end;gap:24px;position:fixed;top:0;left:0;right:0;bottom:0;background:linear-gradient(180deg, rgb(20,20,20) 0%, rgb(20,20,20) 40%, rgb(90,90,90) 100%);padding:40px clamp(20px,8vw,160px) 64px clamp(20px,8vw,160px);box-sizing:border-box;z-index:30;transform:{{ menuTransform }};transition:transform 0.45s cubic-bezier(0.65,0,0.35,1);">
+      <a href="#projekte" onClick="{{ onCloseMenu }}" style="font-weight:700;font-size:clamp(36px,10vw,56px);line-height:1;letter-spacing:-0.04em;color:#fff;">Projekte</a>
+      <a href="#ueber-mich" onClick="{{ onCloseMenu }}" style="font-weight:700;font-size:clamp(36px,10vw,56px);line-height:1;letter-spacing:-0.04em;color:#fff;">Über mich</a>
+      <a href="#kontakt" onClick="{{ onCloseMenu }}" style="font-weight:700;font-size:clamp(36px,10vw,56px);line-height:1;letter-spacing:-0.04em;color:#fff;">Kontakt</a>
+    </div>
+    <div style="height:64px;align-self:stretch;"></div>
+    <img src="images/lp-hero.jpg" alt="Hero" style="width:100%;aspect-ratio:1600/852;border-radius:4px;object-fit:cover;align-self:stretch;">
+    <div style="display:flex;flex-direction:row;justify-content:space-between;align-items:center;align-self:stretch;">
+      <p style="flex-grow:1;font-weight:700;font-size:clamp(28px,5vw,60px);line-height:0.95;letter-spacing:-0.04em;color:#000;margin:0;">Industrial Designer mit Fokus auf <span style="color:rgb(108,108,108);">Lorem Ipsum, Lorem Ipsum, Lorem Ipsum</span>. Abschluss Universität für angewandte Kunst Wien, 2026.</p>
+    </div>
+  </div>
+
+  <div id="projekte" data-name="Work Section" style="display:flex;flex-direction:column;gap:clamp(60px,10vw,120px);align-items:flex-start;align-self:stretch;">
+    <div data-rs="split" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:start;align-self:stretch;">
+      <h2 style="font-weight:700;font-size:clamp(32px,6vw,60px);line-height:0.95;letter-spacing:-0.04em;color:#000;margin:0;">Selected Work</h2>
+      <p style="font-weight:700;font-size:clamp(16px,2vw,20px);line-height:0.95;letter-spacing:-0.04em;color:rgb(108,108,108);margin:0;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</p>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:48px;align-items:flex-start;align-self:stretch;">
+
+      <a href="Case Study Temporary Cargo.dc.html" style="display:flex;flex-direction:column;gap:16px;align-items:flex-start;align-self:stretch;">
+        <div style="width:100%;aspect-ratio:1600/814;border-radius:4px;overflow:hidden;align-self:stretch;">
+          <img src="images/lp-speedclap.jpg" alt="Speedclap" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease;" style-hover="transform:scale(1.05);">
+        </div>
+        <span style="font-weight:500;font-size:clamp(18px,2vw,20px);line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);transition:color 0.2s ease;" style-hover="color:#000;">Speedclap — The flexible bike trailor</span>
+        <div style="display:flex;flex-direction:row;flex-wrap:wrap;gap:4px;align-items:flex-start;">
+          <span style="border-radius:2px;background:rgb(39,39,39);padding:8px 12px;font-weight:500;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:#fff;">Urban Mobility</span>
+          <span style="border-radius:2px;background:rgb(244,244,244);padding:8px 12px;font-weight:500;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">Lorem Ipsum</span>
+          <span style="border-radius:2px;background:rgb(244,244,244);padding:8px 12px;font-weight:500;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">Lorem Ipsum</span>
+        </div>
+      </a>
+
+      <div data-rs="split" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:start;align-self:stretch;">
+        <a href="#" style="display:flex;flex-direction:column;gap:16px;align-items:flex-start;">
+          <div style="width:100%;aspect-ratio:796/582;border-radius:4px;overflow:hidden;align-self:stretch;">
+            <img src="images/lp-supercommuter.jpg" alt="Super Commuter" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease;" style-hover="transform:scale(1.05);">
+          </div>
+          <span style="font-weight:500;font-size:clamp(18px,2vw,20px);line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);transition:color 0.2s ease;" style-hover="color:#000;">Super Commuter — The world smallest roller</span>
+          <div style="display:flex;flex-direction:row;flex-wrap:wrap;gap:4px;align-items:flex-start;">
+            <span style="border-radius:2px;background:rgb(39,39,39);padding:8px 12px;font-weight:500;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:#fff;">Urban Mobility</span>
+            <span style="border-radius:2px;background:rgb(244,244,244);padding:8px 12px;font-weight:500;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">Lorem Ipsum</span>
+            <span style="border-radius:2px;background:rgb(244,244,244);padding:8px 12px;font-weight:500;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">Lorem Ipsum</span>
+          </div>
+        </a>
+        <a href="#" style="display:flex;flex-direction:column;gap:16px;align-items:flex-start;">
+          <div style="width:100%;aspect-ratio:796/582;border-radius:4px;overflow:hidden;align-self:stretch;">
+            <img src="images/lp-terra.jpg" alt="Terra" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease;" style-hover="transform:scale(1.05);">
+          </div>
+          <span style="font-weight:500;font-size:clamp(18px,2vw,20px);line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);transition:color 0.2s ease;" style-hover="color:#000;">Terra — Urban Cooling Spot</span>
+          <div style="display:flex;flex-direction:row;flex-wrap:wrap;gap:4px;align-items:flex-start;">
+            <span style="border-radius:2px;background:rgb(165,147,75);padding:8px 12px;font-weight:500;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:#fff;">Sustainability</span>
+            <span style="border-radius:2px;background:rgb(244,244,244);padding:8px 12px;font-weight:500;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">Lorem Ipsum</span>
+            <span style="border-radius:2px;background:rgb(244,244,244);padding:8px 12px;font-weight:500;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">Lorem Ipsum</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="ueber-mich" data-name="About Section" style="display:flex;flex-direction:column;gap:clamp(60px,10vw,120px);align-items:flex-start;align-self:stretch;">
+    <div data-rs="split" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:start;align-self:stretch;">
+      <h2 style="font-weight:700;font-size:clamp(32px,6vw,65px);line-height:0.95;letter-spacing:-0.04em;color:#000;margin:0;">About Me</h2>
+      <div style="display:flex;flex-direction:column;gap:32px;align-items:flex-start;">
+        <p style="align-self:stretch;font-weight:700;font-size:clamp(16px,2vw,20px);line-height:0.95;letter-spacing:-0.04em;color:rgb(108,108,108);margin:0;">Ich gestalte Produkte an der Schnittstelle von Mensch, Technik und Fertigung. Mich interessiert, wie Geräte im professionellen Alltag wirklich benutzt werden – und wie Design Komplexität reduzieren kann. Ausgebildet an der Universität für angewandte Kunst Wien, mit Stationen in Modellbau und CMF-Design.</p>
+        <div style="display:flex;flex-direction:row;flex-wrap:wrap;gap:16px;align-items:center;">
+          <span style="font-weight:700;font-size:clamp(16px,2vw,20px);line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">Skills:</span>
+          <div style="display:flex;flex-direction:row;flex-wrap:wrap;gap:4px;align-items:flex-start;">
+            <span style="border-radius:2px;background:rgb(244,244,244);padding:8px 12px;font-weight:500;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">Rhino</span>
+            <span style="border-radius:2px;background:rgb(244,244,244);padding:8px 12px;font-weight:500;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">Fusion 360</span>
+            <span style="border-radius:2px;background:rgb(244,244,244);padding:8px 12px;font-weight:500;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">KeyShot</span>
+            <span style="border-radius:2px;background:rgb(244,244,244);padding:8px 12px;font-weight:500;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:rgb(108,108,108);">CMF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-rs="about-imgs" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; align-items: start; align-self: stretch; position: static">
+      <div>
+        <img src="images/lp-portrait.jpg" alt="Portrait" style="width:100%;aspect-ratio:796/564.15;border-radius:4px;object-fit:cover;display:block;">
+      </div>
+      <div style="aspect-ratio:796/564.15;border-radius:4px;background:rgb(217,217,217);"></div>
+    </div>
+  </div>
+
+  <div id="kontakt" data-name="Get in Touch" style="border-top:1px solid #000;display:flex;flex-direction:column;gap:clamp(60px,10vw,120px);padding:32px 0px;align-items:flex-start;align-self:stretch;box-sizing:border-box;">
+    <div style="display:flex;flex-direction:row;gap:8px;align-items:flex-start;align-self:stretch;">
+      <p style="flex-grow:1;font-weight:700;font-size:clamp(32px,7vw,65px);line-height:0.95;letter-spacing:-0.04em;margin:0;"><span style="color:#000;">Get in Touch</span><br><a href="mailto:hello@lorenz-eckl.com" onMouseEnter="{{ onMailEnter }}" onMouseLeave="{{ onMailLeave }}" style="color:rgb(108,108,108);display:inline-flex;align-items:center;">
+        <span style="display:inline-block;max-width:{{ mailArrowWidth }};overflow:hidden;opacity:{{ mailArrowOpacity }};transition:max-width 0.3s ease, opacity 0.3s ease;white-space:nowrap;">→&nbsp;</span><span style="transition:transform 0.3s ease;transform:translateX({{ mailTextShift }});display:inline-block;">hello@lorenz-eckl.com</span>
+      </a></p>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:row;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;align-self:stretch;">
+    <span style="font-weight:700;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:#000;">Lorenz Eckl → AUT, Wien</span>
+    <div style="display:flex;flex-direction:row;gap:40px;align-items:center;">
+      <a href="#" style="font-weight:700;font-size:16px;line-height:100%;letter-spacing:-0.04em;color:#000;">Impressum</a>
+      <a href="#" style="font-weight:700;font-size:16px;line-height:100%;color:#000;">Datenschutz</a>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { mailHover: false, menuOpen: false, menuMounted: false };
+  renderVals() {
+    const open = this.state.menuOpen;
+    const closeMenu = () => {
+      this.setState({ menuOpen: false });
+      clearTimeout(this._menuTimer);
+      this._menuTimer = setTimeout(() => this.setState({ menuMounted: false }), 450);
+    };
+    return {
+      onMailEnter: () => this.setState({ mailHover: true }),
+      onMailLeave: () => this.setState({ mailHover: false }),
+      mailArrowWidth: this.state.mailHover ? "48px" : "0px",
+      mailArrowOpacity: this.state.mailHover ? 1 : 0,
+      mailTextShift: this.state.mailHover ? "8px" : "0px",
+      onToggleMenu: () => {
+        clearTimeout(this._menuTimer);
+        if (this.state.menuOpen) { closeMenu(); return; }
+        this.setState({ menuMounted: true });
+        requestAnimationFrame(() => requestAnimationFrame(() => this.setState({ menuOpen: true })));
+      },
+      onCloseMenu: closeMenu,
+      mobileMenuDisplay: this.state.menuMounted ? "flex" : "none",
+      menuTransform: open ? "translateY(0)" : "translateY(-100%)",
+      burgerColor: open ? "#fff" : "#000",
+      logoColor: open ? "#fff" : "#000",
+      barTopTransform: open ? "translateY(0)" : "translateY(-8px)",
+      barBottomTransform: open ? "translateY(0)" : "translateY(8px)",
+      barTopOpacity: open ? 0 : 1,
+      barBottomOpacity: open ? 0 : 1,
+    };
+  }
+}
+
+</script>
+</body>
+</html>
