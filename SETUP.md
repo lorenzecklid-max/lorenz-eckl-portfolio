@@ -1,85 +1,90 @@
-# Getting the site live
+# Start here
 
-This repo is a plain static website — no build step, no server to run.
-`index.html` at the root is the homepage; `projects/*.html` are the project
-pages. All the editable text/images live as JSON files in `content/`, and
-`admin/` is a small content-editor ("CMS") your friend can use without
-touching code.
+Hi — this is Lorenz's portfolio website. It was built and tested (desktop,
+tablet, mobile, all working) but **it is not online yet and not yet in a
+GitHub repository**. That's the state you're picking up: a finished folder
+of files that needs to be put online.
 
-Follow these steps once, in order. Nothing here touches your domain — that's
-a separate step for later, and I'll walk you through it when you're ready.
+It's a plain website — no build tools, no server, nothing to install to
+work on it. `index.html` is the homepage; open any `.html` file in a
+browser and it works. The steps below get it onto the internet and set up
+a simple editor ("CMS") so text/images can be changed without touching
+code.
 
-## 1. Put the code on GitHub
+Do the steps in order. Step 5 (the CMS) is optional — skip it if nobody
+needs to edit content through a web form; the site works fine without it.
 
-1. Create a free account at github.com if you don't have one.
-2. Create a new **empty** repository (no README, no .gitignore — just an
-   empty repo), e.g. `lorenz-eckl-portfolio`. Keep it private or public,
-   your choice — either works with everything below.
-3. From this project's folder, push it:
-   ```
-   git remote add origin https://github.com/<your-username>/lorenz-eckl-portfolio.git
-   git push -u origin main
-   ```
+## 1. Get the code onto GitHub
+
+**If you're comfortable with no command line at all (recommended for a
+first time):**
+
+1. Install [GitHub Desktop](https://desktop.github.com/) (free) and sign
+   in / create a GitHub account if you don't have one.
+2. In GitHub Desktop: **File → Add local repository**, and point it at
+   this folder (the one this file is in).
+3. It'll say the folder isn't a Git repository yet — click **create a
+   repository** when it offers.
+4. Click **Publish repository** (top bar). Give it a name, e.g.
+   `lorenz-eckl-portfolio`. Untick "Keep this code private" only if you
+   want it public — private is fine either way for what follows.
+5. Done — the code is now on GitHub.
+
+**If you're OK with the command line instead:**
+```
+cd /path/to/this/folder
+git init
+git add -A
+git commit -m "Initial site"
+git remote add origin https://github.com/<your-username>/<repo-name>.git
+git branch -M main
+git push -u origin main
+```
+(Create the empty repo on GitHub first via "New repository" — no README,
+no .gitignore — then use the URL it gives you above.)
 
 ## 2. Deploy it on Netlify
 
-Netlify hosts the site for free and rebuilds it automatically every time
-the content changes (whether you edit a file directly or your friend edits
-through the CMS).
-
 1. Create a free account at netlify.com — "Sign up with GitHub" is easiest.
 2. **Add a new site → Import an existing project → GitHub**, and pick the
-   repo you just pushed.
-3. Netlify will detect `netlify.toml` and needs no other settings — leave
-   the build command empty and click **Deploy**.
-4. After a minute you'll get a live URL like `random-name-123.netlify.app`.
-   Open it and confirm the site looks right.
+   repo from step 1.
+3. Netlify detects `netlify.toml` in this folder and needs no other
+   settings — leave the build command empty and click **Deploy**.
+4. After a minute you get a live URL like `random-name-123.netlify.app`.
+   Open it and check the site looks right.
 
-## 3. Turn on the CMS (Identity + Git Gateway)
+## 3. (Optional, later) Point a real domain at it
 
-This is what lets your friend log in at `/admin` and edit content through a
-form instead of editing files.
+Once there's a domain to use: add it in Netlify's **Domain management**,
+then update 1-2 DNS records at wherever the domain was bought. Ask if you
+get to this point and want a hand.
+
+## 4. (Optional) Turn on the content editor (CMS)
+
+Only needed if someone who isn't comfortable editing code should be able
+to change text/images/video through a web form at `/admin`.
 
 1. In the Netlify dashboard for this site: **Site configuration → Identity
    → Enable Identity**.
-2. Still under Identity → **Registration**: set it to **Invite only** (so
-   random people can't sign up).
-3. Under Identity → **Services → Git Gateway**: click **Enable Git Gateway**.
-   This lets logged-in Identity users save changes to the GitHub repo
-   without needing their own GitHub account or token.
-4. Under Identity → **Invite users**, enter your friend's email address.
-   They'll get an email with a link to set a password.
+2. Identity → **Registration** → set to **Invite only**.
+3. Identity → **Services → Git Gateway** → **Enable Git Gateway**.
+4. Identity → **Invite users** → enter the editor's email. They get an
+   email to set a password.
+5. They log in at `https://<your-site>.netlify.app/admin/`, edit fields,
+   click **Publish** — the live site updates in about 30 seconds.
+   Images upload directly in the editor; for a video, paste a
+   YouTube/Vimeo link into a gallery block's "Video URL" field.
 
-## 4. Using the CMS
+## What's in this folder
 
-- Go to `https://<your-site>.netlify.app/admin/`.
-- Log in (or finish setting a password from the invite email).
-- Three sections: **Site Settings** (name/email/footer links), **Landing
-  Page** (hero text, project teasers, about, skills), and **Project Pages**
-  (one entry per project — Temporary Cargo, Super Commuter, Terra).
-- Edit a field, click **Publish** — Netlify rebuilds and the live site
-  updates within about 30 seconds.
-- Images/photos upload directly in the editor (drag & drop or browse).
-  For videos: paste a YouTube or Vimeo link into the "Video URL" field on a
-  gallery block of type "Video" — no file upload needed.
-
-A few fields (like which project page a landing teaser links to) use a
-dropdown instead of free text, specifically so a typo can't accidentally
-break a link.
-
-## 5. Your domain — later
-
-Once you've bought a domain, come back and I'll walk you through pointing
-it at this Netlify site (it's a short step: add the domain in Netlify's
-**Domain management**, then update 1-2 DNS records at your registrar).
-
-## What's in this repo
-
-- `index.html`, `projects/*.html` — the pages
-- `assets/css`, `assets/js` — styling and the small scripts that render
-  content from JSON and handle the mobile menu
-- `content/*.json` — all editable text/images (what the CMS edits)
-- `admin/` — the CMS (Decap CMS), configured in `admin/config.yml`
-- `design-handoff/` — the original Claude Design export (mockups, chat
-  history, source fonts/images) kept for reference; not part of the live
-  site
+- `index.html`, `projects/*.html` — the four pages (landing + 3 case
+  studies; Temporary Cargo has real content, Super Commuter and Terra are
+  placeholder text/grey images ready to be filled in)
+- `assets/css`, `assets/js` — styling and the small scripts that load
+  content from JSON and run the mobile menu / hover effects
+- `content/*.json` — all the editable text/images (what the CMS in step 4
+  edits — can also just be hand-edited in any text editor)
+- `admin/` — the CMS itself (Decap CMS), configured by `admin/config.yml`
+- `design-handoff/` — the original design mockup export (Figma-adjacent
+  HTML, chat history, source images/fonts) kept for reference only; not
+  part of the live site, safe to ignore
