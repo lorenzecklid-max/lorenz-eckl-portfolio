@@ -105,6 +105,15 @@
     renderAbout(root, home.about);
     C.renderContact(root, settings, home.contact.heading);
     C.renderFooter(root, settings);
+
+    // Content above is fetched async, so on first load the browser may have
+    // already jumped to a URL hash (e.g. coming from a project page) before
+    // the real content pushed everything into place. Re-jump now that
+    // layout is final.
+    if (location.hash) {
+      var target = document.querySelector(location.hash);
+      if (target) target.scrollIntoView();
+    }
   }).catch(function (err) {
     console.error(err);
   });
