@@ -60,7 +60,7 @@ img { display: block; max-width: 100%; }
 
 .nav {
   position: fixed;
-  top: 24px;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 40;
@@ -77,11 +77,9 @@ img { display: block; max-width: 100%; }
   backdrop-filter: blur(16px) saturate(160%);
   -webkit-backdrop-filter: blur(16px) saturate(160%);
   background: rgba(255,255,255,0.55);
-  border-radius: 4px;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
-  transition: background 0.2s ease, box-shadow 0.2s ease;
+  transition: background 0.2s ease;
 }
-.nav.is-open { background: transparent; box-shadow: none; }
+.nav.is-open { background: transparent; }
 
 .nav-logo {
   font-weight: 700;
