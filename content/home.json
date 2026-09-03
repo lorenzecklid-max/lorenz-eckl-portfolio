@@ -1,6 +1,6 @@
 {
   "hero": {
-    "image": "/assets/images/lp-hero.jpg",
+    "image": "/assets/images/uploads/img_3850.png",
     "prefix": "Industrial Designer mit Fokus auf",
     "accent": "Lorem Ipsum, Lorem Ipsum, Lorem Ipsum",
     "suffix": "Abschluss Universität für angewandte Kunst Wien, 2026."
@@ -16,9 +16,18 @@
       "tagline": "The flexible bike trailor",
       "image": "/assets/images/lp-speedclap.jpg",
       "tags": [
-        { "label": "Urban Mobility", "variant": "dark" },
-        { "label": "Lorem Ipsum", "variant": "muted" },
-        { "label": "Lorem Ipsum", "variant": "muted" }
+        {
+          "label": "Urban Mobility",
+          "variant": "dark"
+        },
+        {
+          "label": "Lorem Ipsum",
+          "variant": "muted"
+        },
+        {
+          "label": "Lorem Ipsum",
+          "variant": "muted"
+        }
       ]
     },
     {
@@ -27,9 +36,18 @@
       "tagline": "The world smallest roller",
       "image": "/assets/images/lp-supercommuter.jpg",
       "tags": [
-        { "label": "Urban Mobility", "variant": "dark" },
-        { "label": "Lorem Ipsum", "variant": "muted" },
-        { "label": "Lorem Ipsum", "variant": "muted" }
+        {
+          "label": "Urban Mobility",
+          "variant": "dark"
+        },
+        {
+          "label": "Lorem Ipsum",
+          "variant": "muted"
+        },
+        {
+          "label": "Lorem Ipsum",
+          "variant": "muted"
+        }
       ]
     },
     {
@@ -38,9 +56,18 @@
       "tagline": "Urban Cooling Spot",
       "image": "/assets/images/lp-terra.jpg",
       "tags": [
-        { "label": "Sustainability", "variant": "gold" },
-        { "label": "Lorem Ipsum", "variant": "muted" },
-        { "label": "Lorem Ipsum", "variant": "muted" }
+        {
+          "label": "Sustainability",
+          "variant": "gold"
+        },
+        {
+          "label": "Lorem Ipsum",
+          "variant": "muted"
+        },
+        {
+          "label": "Lorem Ipsum",
+          "variant": "muted"
+        }
       ]
     }
   ],
@@ -50,7 +77,12 @@
     "secondImage": "",
     "bio": "Ich gestalte Produkte an der Schnittstelle von Mensch, Technik und Fertigung. Mich interessiert, wie Geräte im professionellen Alltag wirklich benutzt werden – und wie Design Komplexität reduzieren kann. Ausgebildet an der Universität für angewandte Kunst Wien, mit Stationen in Modellbau und CMF-Design.",
     "skillsLabel": "Skills:",
-    "skills": ["Rhino", "Fusion 360", "KeyShot", "CMF"]
+    "skills": [
+      "Rhino",
+      "Fusion 360",
+      "KeyShot",
+      "CMF"
+    ]
   },
   "contact": {
     "heading": "Get in Touch"
