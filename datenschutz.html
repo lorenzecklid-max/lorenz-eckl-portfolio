@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datenschutz — Lorenz Eckl</title>
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<div class="page page--project">
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo" data-nav-logo>Lorenz Eckl</a>
+    <div class="nav-links">
+      <a href="index.html#projekte" class="nav-link">Projekte</a>
+      <a href="index.html#ueber-mich" class="nav-link">Über mich</a>
+      <a href="index.html#kontakt" class="nav-link">Kontakt</a>
+    </div>
+    <div class="nav-burger" data-nav-burger role="button" aria-label="Menu" tabindex="0">
+      <span class="nav-burger-bar nav-burger-bar--top"></span>
+      <span class="nav-burger-bar nav-burger-bar--middle"></span>
+      <span class="nav-burger-bar nav-burger-bar--bottom"></span>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" data-mobile-menu>
+    <a href="index.html#projekte">Projekte</a>
+    <a href="index.html#ueber-mich">Über mich</a>
+    <a href="index.html#kontakt">Kontakt</a>
+  </div>
+
+  <div class="nav-spacer"></div>
+
+  <div class="section">
+    <h1 class="section-title">Datenschutz</h1>
+
+    <div class="legal-content">
+      <div>
+        <h2>Verantwortliche Stelle</h2>
+        <p>Lorenz Eckl<br>[Straße, Hausnummer], [PLZ] Wien, Österreich</p>
+        <p>E-Mail: <a href="mailto:hello@lorenz-eckl.com">hello@lorenz-eckl.com</a></p>
+      </div>
+
+      <div>
+        <h2>Hosting</h2>
+        <p>Diese Website wird bei Netlify, Inc. gehostet. Beim Aufruf der Seite werden durch den Hosting-Anbieter automatisch technische Zugriffsdaten (z. B. IP-Adresse, Datum und Uhrzeit des Zugriffs) in Server-Logfiles verarbeitet, wie es beim Betrieb jeder Website technisch notwendig ist.</p>
+      </div>
+
+      <div>
+        <h2>Kontaktaufnahme</h2>
+        <p>Wenn Sie per E-Mail Kontakt aufnehmen, werden die von Ihnen mitgeteilten Daten (u. a. Ihre E-Mail-Adresse) ausschließlich zur Bearbeitung Ihrer Anfrage gespeichert und nicht ohne Ihre Einwilligung weitergegeben.</p>
+      </div>
+
+      <div>
+        <h2>Cookies</h2>
+        <p>Diese Website selbst setzt keine Tracking- oder Marketing-Cookies. Es werden keine Analyse- oder Werbedienste eingebunden.</p>
+      </div>
+
+      <div>
+        <h2>Ihre Rechte</h2>
+        <p>Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten sowie das Recht auf Datenübertragbarkeit und Widerspruch. Wenden Sie sich dazu an die oben genannte E-Mail-Adresse.</p>
+      </div>
+    </div>
+
+    <p class="legal-note">Platzhaltertext — bitte durch eine Rechtsberatung prüfen und um die fehlenden Angaben (Adresse etc.) ergänzen lassen, bevor die Seite veröffentlicht wird.</p>
+  </div>
+
+  <div class="footer">
+    <a href="index.html" class="footer-name" data-footer-name>Lorenz Eckl → AUT, Wien</a>
+    <div class="footer-links">
+      <a href="impressum.html" data-footer-impressum>Impressum</a>
+      <a href="datenschutz.html" data-footer-datenschutz>Datenschutz</a>
+    </div>
+  </div>
+
+</div>
+
+<script src="assets/js/content.js"></script>
+<script src="assets/js/nav.js"></script>
+<script>
+  (function () {
+    window.SiteContent.fetchJson('content/settings.json').then(function (settings) {
+      window.SiteContent.renderFooter(document, settings);
+    }).catch(function (err) { console.error(err); });
+  })();
+</script>
+</body>
+</html>

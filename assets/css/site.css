@@ -587,3 +587,35 @@ img { display: block; max-width: 100%; }
   letter-spacing: -0.04em;
   color: rgb(136,136,136);
 }
+
+/* ---------- legal pages (Impressum / Datenschutz) ---------- */
+
+.legal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 760px;
+}
+.legal-content h2 {
+  font-weight: 700;
+  font-size: clamp(20px, 2.6vw, 26px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #000;
+  margin: 0 0 12px;
+}
+.legal-content p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  color: rgb(90,90,90);
+  margin: 0 0 8px;
+}
+.legal-content a { text-decoration: underline; }
+.legal-note {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgb(180,180,180);
+  max-width: 760px;
+}
