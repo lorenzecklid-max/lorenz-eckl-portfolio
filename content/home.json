@@ -1,9 +1,9 @@
 {
   "hero": {
     "image": "/assets/images/uploads/img_3850.png",
-    "prefix": "Industrial Designer mit Fokus auf Alles",
-    "accent": "Lorem Ipsum, Lorem Ipsum, Lorem Ipsum",
-    "suffix": "Abschluss Universität für angewandte Kunst Wien, 2026."
+    "prefix": "Industrial Designer focused on ",
+    "accent": "mechanics, materials and making. Developing products through hands-on experimentation, prototyping and a strong understanding of how things are built. ",
+    "suffix": "Graduated from the University of Applied Arts Vienna in 2026."
   },
   "work": {
     "heading": "Selected Work",
