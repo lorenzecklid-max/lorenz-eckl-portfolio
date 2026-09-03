@@ -75,13 +75,16 @@
     "heading": "About Me",
     "portraitImage": "/assets/images/lp-portrait.jpg",
     "secondImage": "",
-    "bio": "Ich gestalte Produkte an der Schnittstelle von Mensch, Technik und Fertigung. Mich interessiert, wie Geräte im professionellen Alltag wirklich benutzt werden – und wie Design Komplexität reduzieren kann. Ausgebildet an der Universität für angewandte Kunst Wien, mit Stationen in Modellbau und CMF-Design.",
+    "bio": "I design products with a strong interest in mechanics, materials and manufacturing. My process is hands-on, moving between sketches, CAD, models and functional prototypes to develop simple solutions to complex problems. With a background in Interior Design and Wood Technology, I studied Industrial Design at the University of Applied Arts Vienna under Stefan Diez.",
     "skillsLabel": "Skills:",
     "skills": [
       "Rhino",
       "Fusion 360",
-      "KeyShot",
-      "CMF"
+      "3D Printing",
+      "Prototyping",
+      "Model Making",
+      "CMF",
+      "Sketching"
     ]
   },
   "contact": {
