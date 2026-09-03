@@ -21,7 +21,7 @@
 * { box-sizing: border-box; }
 
 html, body { margin: 0; background: #fff; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 120px; }
 
 body {
   font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
@@ -74,7 +74,14 @@ img { display: block; max-width: 100%; }
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  background: rgba(255,255,255,0.55);
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
 }
+.nav.is-open { background: transparent; box-shadow: none; }
 
 .nav-logo {
   font-weight: 700;
@@ -98,15 +105,12 @@ img { display: block; max-width: 100%; }
   font-size: clamp(13.5px, 1.8vw, 18px);
   line-height: 100%;
   color: #000;
-  backdrop-filter: blur(12px) saturate(160%);
-  -webkit-backdrop-filter: blur(12px) saturate(160%);
-  background: rgba(255,255,255,0.55);
   border-radius: 2px;
   padding: 10px 16px;
   transition: background 0.2s ease, color 0.2s ease;
 }
 .nav-link:hover {
-  background: rgba(220,220,220,0.7);
+  background: rgba(0,0,0,0.06);
   color: rgb(90,90,90) !important;
 }
 

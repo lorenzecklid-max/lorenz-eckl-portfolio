@@ -4,6 +4,7 @@
     var burger = document.querySelector('[data-nav-burger]');
     var menu = document.querySelector('[data-mobile-menu]');
     var logo = document.querySelector('[data-nav-logo]');
+    var nav = document.querySelector('.nav');
     if (!burger || !menu) return;
 
     var open = false;
@@ -13,6 +14,7 @@
       open = next;
       burger.classList.toggle('is-open', open);
       if (logo) logo.classList.toggle('is-open', open);
+      if (nav) nav.classList.toggle('is-open', open);
 
       clearTimeout(hideTimer);
       if (open) {
