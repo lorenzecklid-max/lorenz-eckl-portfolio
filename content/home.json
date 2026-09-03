@@ -12,8 +12,8 @@
   "projects": [
     {
       "slug": "temporary-cargo",
-      "title": "Speedclap",
-      "tagline": "The flexible bike trailor",
+      "title": "Temporary Cargo ",
+      "tagline": "Extra cargo capacity, only when you need it.",
       "image": "/assets/images/lp-speedclap.jpg",
       "tags": [
         {
@@ -21,19 +21,19 @@
           "variant": "dark"
         },
         {
-          "label": "Lorem Ipsum",
-          "variant": "muted"
+          "variant": "muted",
+          "label": "Mechanics"
         },
         {
-          "label": "Lorem Ipsum",
-          "variant": "muted"
+          "variant": "muted",
+          "label": "Prototyping"
         }
       ]
     },
     {
       "slug": "super-commuter",
-      "title": "Super Commuter",
-      "tagline": "The world smallest roller",
+      "title": "Taschen Roller",
+      "tagline": "The world’s smallest kick scooter",
       "image": "/assets/images/lp-supercommuter.jpg",
       "tags": [
         {
@@ -41,11 +41,11 @@
           "variant": "dark"
         },
         {
-          "label": "Lorem Ipsum",
+          "label": "Lightweight Design",
           "variant": "muted"
         },
         {
-          "label": "Lorem Ipsum",
+          "label": "Compact Design",
           "variant": "muted"
         }
       ]
@@ -53,20 +53,19 @@
     {
       "slug": "terra",
       "title": "Terra",
-      "tagline": "Urban Cooling Spot",
-      "image": "/assets/images/lp-terra.jpg",
+      "tagline": "Cooling urban spaces through water and evaporation.",
       "tags": [
         {
-          "label": "Sustainability",
-          "variant": "gold"
+          "variant": "gold",
+          "label": "Urban Cooling"
         },
         {
-          "label": "Lorem Ipsum",
-          "variant": "muted"
+          "variant": "muted",
+          "label": "Ceramics"
         },
         {
-          "label": "Lorem Ipsum",
-          "variant": "muted"
+          "variant": "muted",
+          "label": "Sustainability"
         }
       ]
     }
