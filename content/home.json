@@ -1,6 +1,6 @@
 {
   "hero": {
-    "image": "/assets/images/uploads/img_3850.png",
+    "image": "/assets/images/uploads/cvfbvbc.png",
     "prefix": "I design products from the inside out.",
     "accent": "Industrial Designer based in Vienna, working across concept, mechanics and prototyping."
   },
@@ -72,9 +72,9 @@
   ],
   "about": {
     "heading": "About Me",
-    "portraitImage": "/assets/images/uploads/gfh.png",
+    "portraitImage": "/assets/images/uploads/profil-website.png",
     "secondImage": "/assets/images/uploads/jklh.png",
-    "thirdImage": "/assets/images/uploads/profil-website.png",
+    "thirdImage": "/assets/images/uploads/gfh.png",
     "bio": "I like to understand how things work, how they’re made, and how they can be made better. I work between sketching, CAD and physical prototyping to turn ideas into functional, buildable products. My background in Interior Design and Wood Technology, followed by Industrial Design at the University of Applied Arts Vienna under Stefan Diez, shaped my hands-on approach to design.",
     "skillsLabel": "Skills:",
     "skills": [
