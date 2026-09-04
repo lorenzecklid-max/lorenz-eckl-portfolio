@@ -359,14 +359,15 @@ img { display: block; max-width: 100%; }
 .about-imgs img,
 .about-imgs .img-placeholder {
   width: 100%;
-  aspect-ratio: 796/460;
+  aspect-ratio: 796/520;
   border-radius: 4px;
   object-fit: cover;
   display: block;
 }
 .about-imgs-full img,
 .about-imgs-full .img-placeholder {
-  aspect-ratio: 1600/450;
+  aspect-ratio: 1600/900;
+  object-position: center 25%;
 }
 
 .img-placeholder { background: rgb(217,217,217); }
