@@ -7,7 +7,7 @@
   },
   "work": {
     "heading": "Selected Work",
-    "intro": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,"
+    "intro": "A selection of projects shaped by curiosity, experimentation and the drive to make ideas work."
   },
   "projects": [
     {
@@ -67,15 +67,16 @@
           "variant": "muted",
           "label": "Sustainability"
         }
-      ]
+      ],
+      "image": "/assets/images/uploads/reoa_mak_morizfischer_52-kopie.jpg"
     }
   ],
   "about": {
     "heading": "About Me",
-    "portraitImage": "/assets/images/lp-portrait.jpg",
-    "secondImage": "/assets/images/uploads/gfh.png",
-    "thirdImage": "",
-    "bio": "I design products with a strong interest in mechanics, materials and manufacturing. My process is hands-on, moving between sketches, CAD, models and functional prototypes to develop simple solutions to complex problems. With a background in Interior Design and Wood Technology, I studied Industrial Design at the University of Applied Arts Vienna under Stefan Diez.",
+    "portraitImage": "/assets/images/uploads/gfh.png",
+    "secondImage": "/assets/images/uploads/jklh.png",
+    "thirdImage": "/assets/images/uploads/profil-website.png",
+    "bio": "I like to understand how things work, how they’re made, and how they can be made better. I work between sketching, CAD and physical prototyping to turn ideas into functional, buildable products. My background in Interior Design and Wood Technology, followed by Industrial Design at the University of Applied Arts Vienna under Stefan Diez, shaped my hands-on approach to design.",
     "skillsLabel": "Skills:",
     "skills": [
       "Rhino",
