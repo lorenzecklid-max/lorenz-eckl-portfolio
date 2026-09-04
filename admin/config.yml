@@ -48,9 +48,8 @@ collections:
             widget: "object"
             fields:
               - { label: "Hero image", name: "image", widget: "image" }
-              - { label: "Headline — text before the highlight", name: "prefix", widget: "string" }
-              - { label: "Headline — highlighted part", name: "accent", widget: "string" }
-              - { label: "Headline — text after the highlight", name: "suffix", widget: "string" }
+              - { label: "Headline — black sentence", name: "prefix", widget: "string" }
+              - { label: "Headline — grey sentence", name: "accent", widget: "string" }
           - label: "Selected Work — intro"
             name: "work"
             widget: "object"
