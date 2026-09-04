@@ -34,7 +34,7 @@
     }
     var hero = root.querySelector('[data-cs-hero]');
     if (hero) {
-      var media = C.mediaEl(p.heroImage, 'cs-hero-img', p.eyebrow);
+      var media = C.mediaEl(p.heroImage, 'cs-hero-img', p.eyebrow, { width: 1600, lazy: false });
       hero.replaceWith(media);
       media.setAttribute('data-cs-hero', '');
     }
@@ -67,7 +67,7 @@
         vb.appendChild(ph);
       }
       if (item.image) {
-        vb.appendChild(C.mediaEl(item.image, 'cs-hero-img', ''));
+        vb.appendChild(C.mediaEl(item.image, 'cs-hero-img', '', { width: 1600 }));
       }
       return vb;
     }
@@ -75,8 +75,9 @@
     var wrap = C.el('div', 'gallery-block');
     var galleryClass = item.type === 'full' ? 'gallery gallery--full' : 'gallery';
     var gallery = C.el('div', galleryClass);
-    gallery.appendChild(C.mediaEl(item.image, '', ''));
-    if (item.type === 'pair') gallery.appendChild(C.mediaEl(item.image2, '', ''));
+    var galleryWidth = item.type === 'full' ? 1600 : 800;
+    gallery.appendChild(C.mediaEl(item.image, '', '', { width: galleryWidth }));
+    if (item.type === 'pair') gallery.appendChild(C.mediaEl(item.image2, '', '', { width: galleryWidth }));
     wrap.appendChild(gallery);
     if (item.caption) {
       var caption = C.el('span', 'gallery-caption');
@@ -118,7 +119,7 @@
       .forEach(function (p) {
         var card = C.el('a', 'related-card');
         card.href = p.slug + '.html';
-        card.appendChild(C.mediaEl(p.image, '', p.title));
+        card.appendChild(C.mediaEl(p.image, '', p.title, { width: 800 }));
         var span = document.createElement('span');
         span.textContent = p.title + ' — ' + p.tagline;
         card.appendChild(span);
