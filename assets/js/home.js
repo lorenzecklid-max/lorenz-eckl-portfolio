@@ -79,12 +79,18 @@
     var imgsWrap = root.querySelector('[data-about-imgs]');
     if (imgsWrap) {
       imgsWrap.innerHTML = '';
+      var row = C.el('div', 'about-imgs-row');
       var a = C.el('div');
       a.appendChild(C.mediaEl(about.portraitImage, '', 'Portrait'));
       var b = C.el('div');
       b.appendChild(C.mediaEl(about.secondImage, '', ''));
-      imgsWrap.appendChild(a);
-      imgsWrap.appendChild(b);
+      row.appendChild(a);
+      row.appendChild(b);
+      imgsWrap.appendChild(row);
+
+      var full = C.el('div', 'about-imgs-full');
+      full.appendChild(C.mediaEl(about.thirdImage, '', ''));
+      imgsWrap.appendChild(full);
     }
   }
 

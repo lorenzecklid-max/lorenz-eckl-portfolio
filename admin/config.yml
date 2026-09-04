@@ -98,6 +98,11 @@ collections:
                 widget: "image"
                 required: false
                 hint: "Leave empty to keep the grey placeholder tile."
+              - label: "Third image (full width, below the first two)"
+                name: "thirdImage"
+                widget: "image"
+                required: false
+                hint: "Leave empty to keep the grey placeholder tile."
               - { label: "Bio text", name: "bio", widget: "text" }
               - { label: "Skills label", name: "skillsLabel", widget: "string" }
               - label: "Skills"
