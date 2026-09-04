@@ -3,7 +3,10 @@
 
   function renderHero(root, hero) {
     var img = root.querySelector('[data-hero-image]');
-    if (img && hero.image) img.src = hero.image;
+    if (img && hero.image) {
+      img.src = C.optimizedUrl(hero.image, 1600);
+      img.srcset = C.optimizedUrl(hero.image, 1600) + ' 1x, ' + C.optimizedUrl(hero.image, 3200) + ' 2x';
+    }
     var headline = root.querySelector('[data-hero-headline]');
     if (headline) {
       headline.innerHTML =
@@ -29,7 +32,7 @@
     card.href = 'projects/' + project.slug + '.html';
 
     var mediaWrap = C.el('div', 'project-card-media ' + (featured ? 'project-card-media--featured' : 'project-card-media--grid'));
-    mediaWrap.appendChild(C.mediaEl(project.image, '', project.title));
+    mediaWrap.appendChild(C.mediaEl(project.image, '', project.title, { width: featured ? 1600 : 800 }));
     card.appendChild(mediaWrap);
 
     var title = C.el('span', 'project-card-title');
@@ -81,15 +84,15 @@
       imgsWrap.innerHTML = '';
       var row = C.el('div', 'about-imgs-row');
       var a = C.el('div');
-      a.appendChild(C.mediaEl(about.portraitImage, '', 'Portrait'));
+      a.appendChild(C.mediaEl(about.portraitImage, '', 'Portrait', { width: 800 }));
       var b = C.el('div');
-      b.appendChild(C.mediaEl(about.secondImage, '', ''));
+      b.appendChild(C.mediaEl(about.secondImage, '', '', { width: 800 }));
       row.appendChild(a);
       row.appendChild(b);
       imgsWrap.appendChild(row);
 
       var full = C.el('div', 'about-imgs-full');
-      full.appendChild(C.mediaEl(about.thirdImage, '', ''));
+      full.appendChild(C.mediaEl(about.thirdImage, '', '', { width: 1600 }));
       imgsWrap.appendChild(full);
     }
   }
