@@ -271,6 +271,12 @@ img { display: block; max-width: 100%; }
 }
 .project-card-media--featured { aspect-ratio: 1600/814; }
 .project-card-media--grid { aspect-ratio: 796/582; }
+@media (max-width: 900px) {
+  /* Below 900px the "split" grid collapses to a single column, so the
+     featured card is stacked with the others at the same width — give it
+     the same, more square ratio instead of the wide desktop hero crop. */
+  .project-card-media--featured { aspect-ratio: 796/582; }
+}
 
 .project-card-media img {
   width: 100%;
@@ -334,6 +340,13 @@ img { display: block; max-width: 100%; }
   color: rgb(108,108,108);
 }
 .about-imgs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: stretch;
+  align-self: stretch;
+}
+.about-imgs-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
@@ -341,7 +354,7 @@ img { display: block; max-width: 100%; }
   align-self: stretch;
 }
 @media (max-width: 900px) {
-  .about-imgs { gap: 4px !important; }
+  .about-imgs, .about-imgs-row { gap: 4px !important; }
 }
 .about-imgs img,
 .about-imgs .img-placeholder {
@@ -350,6 +363,10 @@ img { display: block; max-width: 100%; }
   border-radius: 4px;
   object-fit: cover;
   display: block;
+}
+.about-imgs-full img,
+.about-imgs-full .img-placeholder {
+  aspect-ratio: 1600/814;
 }
 
 .img-placeholder { background: rgb(217,217,217); }
