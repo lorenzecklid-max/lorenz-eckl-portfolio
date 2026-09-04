@@ -366,8 +366,8 @@ img { display: block; max-width: 100%; }
 }
 .about-imgs-full img,
 .about-imgs-full .img-placeholder {
-  aspect-ratio: 1600/900;
-  object-position: center 25%;
+  aspect-ratio: 1600/765;
+  object-position: center center;
 }
 
 .img-placeholder { background: rgb(217,217,217); }
