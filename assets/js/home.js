@@ -7,7 +7,7 @@
     var headline = root.querySelector('[data-hero-headline]');
     if (headline) {
       headline.innerHTML =
-        escapeHtml(hero.prefix) + ' <span class="accent">' + escapeHtml(hero.accent) + '</span>. ' + escapeHtml(hero.suffix);
+        escapeHtml(hero.prefix) + ' <span class="accent">' + escapeHtml(hero.accent) + '</span>';
     }
   }
 
