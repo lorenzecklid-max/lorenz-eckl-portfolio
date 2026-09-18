@@ -34,7 +34,10 @@
       "videoUrl": ""
     },
     {
-      "type": "full"
+      "type": "video-pair",
+      "caption": "Beyond improving the local microclimate, Terra introduces water into the urban environment — creating small opportunities for insects and other urban life.",
+      "videoUrl": "https://vimeo.com/1228124580?fl=ip&fe=ec",
+      "videoUrl2": "https://vimeo.com/1228124381?fl=ip&fe=ec"
     }
   ],
   "headline": "Urban Cooling Spot",
