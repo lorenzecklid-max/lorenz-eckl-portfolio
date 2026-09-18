@@ -11,11 +11,11 @@
   "gallery": [
     {
       "type": "full",
-      "image": "/assets/images/cs-monitor.jpg",
+      "image": "",
       "image2": "",
       "caption": "",
       "videoLabel": "",
-      "videoUrl": ""
+      "videoUrl": "https://vimeo.com/1228027926?fl=ip&fe=ec"
     },
     {
       "type": "pair",
@@ -33,8 +33,7 @@
       "videoLabel": "Schweißen",
       "videoUrl": "https://vimeo.com/1228018980?fl=ip&fe=ec",
       "videoLabel2": "Biegen",
-      "videoUrl2": "https://vimeo.com/1228020684?fl=ip&fe=ec",
-      "videoOffsetY2": 25
+      "videoUrl2": "https://vimeo.com/1228020684?fl=ip&fe=ec"
     },
     {
       "type": "pair",
