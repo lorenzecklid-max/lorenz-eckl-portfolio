@@ -583,6 +583,18 @@ img { display: block; max-width: 100%; }
   border-radius: 4px;
   overflow: hidden;
 }
+/* Videos placed in a gallery grid (video-pair / photo-video) match the
+   photo pairs' own ratio instead of 16:9, so a row of tiles looks
+   consistent whether it's photos, videos, or a mix -- but only once the
+   grid is actually two columns (desktop); on mobile .gallery collapses
+   to a single column, where the wider 16:9 already looked right. The
+   single full-width video block (.video-block, not in a grid) keeps
+   16:9 always. */
+@media (min-width: 641px) {
+  .gallery .video-embed-frame {
+    aspect-ratio: 796/814;
+  }
+}
 .video-embed {
   display: block;
   position: absolute;
