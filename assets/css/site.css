@@ -582,6 +582,7 @@ img { display: block; max-width: 100%; }
   aspect-ratio: 16/9;
   border-radius: 4px;
   overflow: hidden;
+  background: rgb(217,217,217);
 }
 /* Videos placed in a gallery grid (video-pair / photo-video) match the
    photo pairs' own ratio instead of 16:9, so a row of tiles looks
