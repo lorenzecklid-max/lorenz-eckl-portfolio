@@ -1,5 +1,5 @@
 {
-  "heroImage": "/assets/images/uploads/lorenz_eckl_universitaet_fuer_angewandte_kunst_wien_sose_26_daniela_trost_cc-by-nc-nd-4-0_003.jpg",
+  "heroImage": "/assets/images/uploads/gesamt-herjo.jpg",
   "eyebrow": "Temporary Cargo",
   "keywordsLabel": "Keywords",
   "keywords": [
@@ -34,7 +34,7 @@
       "videoUrl2": "https://vimeo.com/1228020684?fl=ip&fe=ec"
     },
     {
-      "type": "photo-video",
+      "type": "pair",
       "image": "/assets/images/cs-bracket.jpg",
       "image2": "",
       "caption": "Thorough limit testing to find the right balance between weight and stability.",
@@ -59,7 +59,7 @@
       "videoUrl": ""
     },
     {
-      "type": "photo-video",
+      "type": "pair",
       "image": "/assets/images/cs-grocery.jpg",
       "image2": "",
       "caption": "My first trip to Spar",
