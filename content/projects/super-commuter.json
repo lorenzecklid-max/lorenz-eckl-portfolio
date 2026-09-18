@@ -1,28 +1,56 @@
 {
-  "slug": "super-commuter",
-  "eyebrow": "Super Commuter",
-  "headline": "The world's smallest roller for the last mile of your commute.",
+  "heroImage": "/assets/images/uploads/taschenroller-fahren-kopie.png",
+  "eyebrow": "TaschenRoller",
   "keywordsLabel": "Keywords",
-  "keywords": ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"],
-  "specsLabel": "Eckdaten",
-  "specs": ["Semesterprojekt", "2025"],
-  "heroImage": "",
-  "problem": {
-    "heading": "The Problem",
-    "body": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-  },
+  "keywords": [
+    "Compact Mobility",
+    "Lightweight Design",
+    "Prototyping"
+  ],
+  "slug": "super-commuter",
+  "gallery": [
+    {
+      "type": "full",
+      "image": "",
+      "image2": "",
+      "caption": "",
+      "videoLabel": "",
+      "videoUrl": ""
+    },
+    {
+      "type": "pair",
+      "image": "",
+      "image2": "",
+      "caption": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
+      "videoLabel": "",
+      "videoUrl": ""
+    },
+    {
+      "type": "pair",
+      "image": "",
+      "image2": "",
+      "caption": "Sed diam nonumy eirmod tempor invidunt ut labore et dolore.",
+      "videoLabel": "",
+      "videoUrl": ""
+    }
+  ],
+  "headline": "An ultra-light kick scooter designed to go wherever you go.",
   "idea": {
     "heading": "The Idea",
     "body": "At vero eos et accusam et justo duo dolores et ea rebum.<br><br>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum."
   },
-  "gallery": [
-    { "type": "full", "image": "", "image2": "", "caption": "", "videoLabel": "", "videoUrl": "" },
-    { "type": "pair", "image": "", "image2": "", "caption": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.", "videoLabel": "", "videoUrl": "" },
-    { "type": "pair", "image": "", "image2": "", "caption": "Sed diam nonumy eirmod tempor invidunt ut labore et dolore.", "videoLabel": "", "videoUrl": "" }
+  "specs": [
+    "Pre-Diploma Project",
+    "2024"
   ],
+  "specsLabel": "Eckdaten",
   "result": {
     "heading": "The Result",
     "bodyBlack": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.",
     "bodyMuted": "Ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+  },
+  "problem": {
+    "heading": "The Problem",
+    "body": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
   }
 }
