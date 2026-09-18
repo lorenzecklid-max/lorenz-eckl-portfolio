@@ -69,6 +69,49 @@
     return url;
   }
 
+  // The gallery video slot is a fixed 16:9 "mask". A blind fixed oversize
+  // (e.g. always +15%) only ever covers that mask for a video that's
+  // already roughly landscape -- a portrait clip (common for phone
+  // footage) is far too narrow to fill a 16:9 box that way and leaves
+  // big white bars on the sides. So instead: ask Vimeo/YouTube's public
+  // oEmbed endpoint for the clip's *real* width/height, then compute
+  // exactly how much to zoom the embed so it covers the mask completely
+  // (same math as CSS object-fit: cover), whatever its native shape.
+  function fetchAspectRatio(url) {
+    var vimeo = url.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+    var oembedUrl = null;
+    if (vimeo) {
+      oembedUrl = 'https://vimeo.com/api/oembed.json?url=' + encodeURIComponent('https://vimeo.com/' + vimeo[1]);
+    } else {
+      var youtube = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([\w-]+)/);
+      if (youtube) {
+        oembedUrl = 'https://www.youtube.com/oembed?format=json&url=' +
+          encodeURIComponent('https://www.youtube.com/watch?v=' + youtube[1]);
+      }
+    }
+    if (!oembedUrl) return Promise.resolve(null);
+    return fetch(oembedUrl)
+      .then(function (res) { return res.ok ? res.json() : null; })
+      .then(function (data) {
+        return (data && data.width && data.height) ? data.width / data.height : null;
+      })
+      .catch(function () { return null; });
+  }
+
+  // Zooms/crops an absolutely-centered embed (see .video-embed-frame /
+  // .video-embed in site.css) so it exactly covers a container of the
+  // given aspect ratio, given the embedded content's real aspect ratio.
+  function applyCoverFit(iframe, containerRatio, sourceRatio) {
+    var margin = 1.01; // guards against sub-pixel gaps at the crop edge
+    if (sourceRatio >= containerRatio) {
+      iframe.style.height = (100 * margin) + '%';
+      iframe.style.width = (100 * margin * (sourceRatio / containerRatio)) + '%';
+    } else {
+      iframe.style.width = (100 * margin) + '%';
+      iframe.style.height = (100 * margin * (containerRatio / sourceRatio)) + '%';
+    }
+  }
+
   // Builds either a live, autoplaying embed (URL given) or a placeholder
   // tile (no URL yet) -- shared by single-video and side-by-side blocks.
   function buildVideoFrame(url, label) {
@@ -81,6 +124,9 @@
       iframe.setAttribute('allowfullscreen', '');
       iframe.setAttribute('loading', 'lazy');
       frame.appendChild(iframe);
+      fetchAspectRatio(url).then(function (ratio) {
+        if (ratio) applyCoverFit(iframe, 16 / 9, ratio);
+      });
       return frame;
     }
     var ph = C.el('div', 'video-placeholder checker');
