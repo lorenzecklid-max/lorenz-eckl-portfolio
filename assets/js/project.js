@@ -245,9 +245,10 @@
     if (heading) heading.textContent = result.heading;
     var body = block.querySelector('[data-body]');
     if (body) {
-      body.innerHTML =
-        '<span class="dark">' + result.bodyBlack + '</span><br><br>' +
-        '<span class="muted">' + result.bodyMuted + '</span>';
+      body.innerHTML = '<span class="dark">' + result.bodyBlack + '</span>';
+      if (result.bodyMuted) {
+        body.innerHTML += '<br><br><span class="muted">' + result.bodyMuted + '</span>';
+      }
     }
   }
 

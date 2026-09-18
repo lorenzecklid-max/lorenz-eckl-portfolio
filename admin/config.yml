@@ -211,7 +211,11 @@ collections:
             fields:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Body text (black)", name: "bodyBlack", widget: "text" }
-              - { label: "Body text (grey)", name: "bodyMuted", widget: "text" }
+              - label: "Body text (grey, optional)"
+                name: "bodyMuted"
+                widget: "text"
+                required: false
+                hint: "Leave empty for just the black paragraph -- no second grey block will show."
 
       - file: "content/projects/super-commuter.json"
         label: "Super Commuter"
@@ -307,7 +311,11 @@ collections:
             fields:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Body text (black)", name: "bodyBlack", widget: "text" }
-              - { label: "Body text (grey)", name: "bodyMuted", widget: "text" }
+              - label: "Body text (grey, optional)"
+                name: "bodyMuted"
+                widget: "text"
+                required: false
+                hint: "Leave empty for just the black paragraph -- no second grey block will show."
 
       - file: "content/projects/terra.json"
         label: "Terra"
@@ -403,4 +411,8 @@ collections:
             fields:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Body text (black)", name: "bodyBlack", widget: "text" }
-              - { label: "Body text (grey)", name: "bodyMuted", widget: "text" }
+              - label: "Body text (grey, optional)"
+                name: "bodyMuted"
+                widget: "text"
+                required: false
+                hint: "Leave empty for just the black paragraph -- no second grey block will show."
