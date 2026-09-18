@@ -126,6 +126,18 @@
     iframe.style.transform = 'translate(-50%, -' + y + '%)';
   }
 
+  // The mask's own ratio isn't always 16:9 -- a video-pair/photo-video
+  // cell in the gallery grid is square-ish (matching the photo pairs) on
+  // desktop but 16:9 again once .gallery collapses to one column on
+  // mobile (see site.css). Read whatever CSS actually resolved to,
+  // rather than hardcoding it, so the crop math (applyCoverFit) always
+  // matches the mask it's covering.
+  function getFrameAspectRatio(frameEl) {
+    var parts = String(getComputedStyle(frameEl).aspectRatio).split('/').map(parseFloat);
+    if (parts.length === 2 && parts[0] > 0 && parts[1] > 0) return parts[0] / parts[1];
+    return 16 / 9;
+  }
+
   // Builds either a live, autoplaying embed (URL given) or a placeholder
   // tile (no URL yet) -- shared by single-video and side-by-side blocks.
   function buildVideoFrame(url, label, offsetY) {
@@ -140,7 +152,7 @@
       frame.appendChild(iframe);
       if (offsetY) applyVerticalBias(iframe, offsetY);
       fetchAspectRatio(url).then(function (ratio) {
-        if (ratio) applyCoverFit(iframe, 16 / 9, ratio);
+        if (ratio) applyCoverFit(iframe, getFrameAspectRatio(frame), ratio);
       });
       return frame;
     }
