@@ -54,12 +54,18 @@
   // site's dedicated *player* URL is actually allowed to be shown inside
   // an iframe on another domain -- everything else gets silently blocked
   // by the browser. Normalize to that player URL regardless of what was
-  // pasted, so the CMS field just works.
+  // pasted, so the CMS field just works, and set it up to autoplay
+  // muted on a silent loop with no UI chrome -- like an animated photo,
+  // matching the gallery images around it, no click required.
   function toEmbedUrl(url) {
     var vimeo = url.match(/vimeo\.com\/(?:video\/)?(\d+)/);
-    if (vimeo) return 'https://player.vimeo.com/video/' + vimeo[1];
+    if (vimeo) return 'https://player.vimeo.com/video/' + vimeo[1] + '?background=1';
     var youtube = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([\w-]+)/);
-    if (youtube) return 'https://www.youtube.com/embed/' + youtube[1];
+    if (youtube) {
+      var id = youtube[1];
+      return 'https://www.youtube.com/embed/' + id +
+        '?autoplay=1&mute=1&loop=1&playlist=' + id + '&controls=0&modestbranding=1&rel=0';
+    }
     return url;
   }
 
@@ -70,6 +76,7 @@
         var iframe = document.createElement('iframe');
         iframe.className = 'video-embed';
         iframe.src = toEmbedUrl(item.videoUrl);
+        iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
         iframe.setAttribute('allowfullscreen', '');
         iframe.setAttribute('loading', 'lazy');
         vb.appendChild(iframe);

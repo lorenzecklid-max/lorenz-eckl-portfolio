@@ -573,6 +573,7 @@ img { display: block; max-width: 100%; }
   color: rgb(120,120,120);
 }
 .video-embed {
+  display: block;
   width: 100%;
   aspect-ratio: 1600/814;
   border-radius: 4px;
