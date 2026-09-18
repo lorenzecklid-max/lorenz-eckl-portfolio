@@ -34,7 +34,7 @@
       "videoUrl2": "https://vimeo.com/1228020684?fl=ip&fe=ec"
     },
     {
-      "type": "pair",
+      "type": "photo-video",
       "image": "/assets/images/cs-bracket.jpg",
       "image2": "",
       "caption": "Thorough limit testing to find the right balance between weight and stability.",
@@ -59,7 +59,7 @@
       "videoUrl": ""
     },
     {
-      "type": "pair",
+      "type": "photo-video",
       "image": "/assets/images/cs-grocery.jpg",
       "image2": "",
       "caption": "My first trip to Spar",

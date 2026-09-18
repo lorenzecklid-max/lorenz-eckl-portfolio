@@ -163,18 +163,19 @@ collections:
                   - { label: "Two images side by side", value: "pair" }
                   - { label: "Video", value: "video" }
                   - { label: "Two videos side by side", value: "video-pair" }
+                  - { label: "Image + video side by side (photo left, video right)", value: "photo-video" }
               - label: "Image"
                 name: "image"
                 widget: "image"
                 required: false
-                hint: "For 'Video' blocks this is an optional still image shown below the video."
+                hint: "For 'Video' blocks this is an optional still image shown below the video. For 'Image + video side by side' this is the photo (left side)."
               - label: "Second image (only for 'two images side by side')"
                 name: "image2"
                 widget: "image"
                 required: false
               - { label: "Caption (optional, shown in italics)", name: "caption", widget: "string", required: false }
               - { label: "Video placeholder label (only used while videoUrl is empty)", name: "videoLabel", widget: "string", required: false }
-              - label: "Video URL (for 'Video' blocks, or the left video of 'Two videos side by side')"
+              - label: "Video URL (for 'Video' blocks, the left video of 'Two videos side by side', or the video in 'Image + video side by side')"
                 name: "videoUrl"
                 widget: "string"
                 required: false
@@ -187,7 +188,7 @@ collections:
                 name: "videoUrl2"
                 widget: "string"
                 required: false
-                hint: "Paste any YouTube or Vimeo link. Leave empty to show a placeholder box instead."
+                hint: "Paste any YouTube or Vimeo link. Leave empty to show a placeholder box instead. (For 'Image + video side by side', use the 'Video URL' field above instead -- this one is only read as a fallback if that's empty.)"
               - label: "Video crop position (for the first/left video)"
                 name: "videoOffsetY"
                 widget: "cropSlider"
@@ -258,18 +259,19 @@ collections:
                   - { label: "Two images side by side", value: "pair" }
                   - { label: "Video", value: "video" }
                   - { label: "Two videos side by side", value: "video-pair" }
+                  - { label: "Image + video side by side (photo left, video right)", value: "photo-video" }
               - label: "Image"
                 name: "image"
                 widget: "image"
                 required: false
-                hint: "For 'Video' blocks this is an optional still image shown below the video."
+                hint: "For 'Video' blocks this is an optional still image shown below the video. For 'Image + video side by side' this is the photo (left side)."
               - label: "Second image (only for 'two images side by side')"
                 name: "image2"
                 widget: "image"
                 required: false
               - { label: "Caption (optional, shown in italics)", name: "caption", widget: "string", required: false }
               - { label: "Video placeholder label (only used while videoUrl is empty)", name: "videoLabel", widget: "string", required: false }
-              - label: "Video URL (for 'Video' blocks, or the left video of 'Two videos side by side')"
+              - label: "Video URL (for 'Video' blocks, the left video of 'Two videos side by side', or the video in 'Image + video side by side')"
                 name: "videoUrl"
                 widget: "string"
                 required: false
@@ -282,7 +284,7 @@ collections:
                 name: "videoUrl2"
                 widget: "string"
                 required: false
-                hint: "Paste any YouTube or Vimeo link. Leave empty to show a placeholder box instead."
+                hint: "Paste any YouTube or Vimeo link. Leave empty to show a placeholder box instead. (For 'Image + video side by side', use the 'Video URL' field above instead -- this one is only read as a fallback if that's empty.)"
               - label: "Video crop position (for the first/left video)"
                 name: "videoOffsetY"
                 widget: "cropSlider"
@@ -353,18 +355,19 @@ collections:
                   - { label: "Two images side by side", value: "pair" }
                   - { label: "Video", value: "video" }
                   - { label: "Two videos side by side", value: "video-pair" }
+                  - { label: "Image + video side by side (photo left, video right)", value: "photo-video" }
               - label: "Image"
                 name: "image"
                 widget: "image"
                 required: false
-                hint: "For 'Video' blocks this is an optional still image shown below the video."
+                hint: "For 'Video' blocks this is an optional still image shown below the video. For 'Image + video side by side' this is the photo (left side)."
               - label: "Second image (only for 'two images side by side')"
                 name: "image2"
                 widget: "image"
                 required: false
               - { label: "Caption (optional, shown in italics)", name: "caption", widget: "string", required: false }
               - { label: "Video placeholder label (only used while videoUrl is empty)", name: "videoLabel", widget: "string", required: false }
-              - label: "Video URL (for 'Video' blocks, or the left video of 'Two videos side by side')"
+              - label: "Video URL (for 'Video' blocks, the left video of 'Two videos side by side', or the video in 'Image + video side by side')"
                 name: "videoUrl"
                 widget: "string"
                 required: false
@@ -377,7 +380,7 @@ collections:
                 name: "videoUrl2"
                 widget: "string"
                 required: false
-                hint: "Paste any YouTube or Vimeo link. Leave empty to show a placeholder box instead."
+                hint: "Paste any YouTube or Vimeo link. Leave empty to show a placeholder box instead. (For 'Image + video side by side', use the 'Video URL' field above instead -- this one is only read as a fallback if that's empty.)"
               - label: "Video crop position (for the first/left video)"
                 name: "videoOffsetY"
                 widget: "cropSlider"
