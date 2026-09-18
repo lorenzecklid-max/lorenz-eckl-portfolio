@@ -578,7 +578,6 @@ img { display: block; max-width: 100%; }
   aspect-ratio: 16/9;
   border-radius: 4px;
   overflow: hidden;
-  align-self: stretch;
 }
 .video-embed {
   display: block;
@@ -588,7 +587,6 @@ img { display: block; max-width: 100%; }
   width: 115%;
   height: 115%;
   transform: translate(-50%, -50%);
-  border: 0;
   border: 0;
 }
 
