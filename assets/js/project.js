@@ -73,13 +73,15 @@
     if (item.type === 'video') {
       var vb = C.el('div', 'video-block');
       if (item.videoUrl) {
+        var frame = C.el('div', 'video-embed-frame');
         var iframe = document.createElement('iframe');
         iframe.className = 'video-embed';
         iframe.src = toEmbedUrl(item.videoUrl);
         iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
         iframe.setAttribute('allowfullscreen', '');
         iframe.setAttribute('loading', 'lazy');
-        vb.appendChild(iframe);
+        frame.appendChild(iframe);
+        vb.appendChild(frame);
       } else {
         var ph = C.el('div', 'video-placeholder checker');
         var label = document.createElement('span');

@@ -558,7 +558,7 @@ img { display: block; max-width: 100%; }
 .video-block { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; align-self: stretch; }
 .video-placeholder {
   width: 100%;
-  aspect-ratio: 1600/814;
+  aspect-ratio: 16/9;
   border-radius: 4px;
   display: flex;
   justify-content: center;
@@ -572,12 +572,23 @@ img { display: block; max-width: 100%; }
   letter-spacing: -0.04em;
   color: rgb(120,120,120);
 }
+.video-embed-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 4px;
+  overflow: hidden;
+  align-self: stretch;
+}
 .video-embed {
   display: block;
-  width: 100%;
-  aspect-ratio: 1600/814;
-  border-radius: 4px;
-  align-self: stretch;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 115%;
+  height: 115%;
+  transform: translate(-50%, -50%);
+  border: 0;
   border: 0;
 }
 
