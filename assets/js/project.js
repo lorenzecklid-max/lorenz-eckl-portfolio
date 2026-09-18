@@ -57,9 +57,20 @@
   // pasted, so the CMS field just works, and set it up to autoplay
   // muted on a silent loop with no UI chrome -- like an animated photo,
   // matching the gallery images around it, no click required.
+  //
+  // Note: deliberately NOT using Vimeo's background=1 mode here. It gives
+  // the same look (autoplay, loop, no chrome) but is meant for ambient
+  // decorative footage and appears to cap streaming quality accordingly,
+  // regardless of the source's actual resolution -- reported as visibly
+  // soft/~360p-looking clips even from 4K sources. Hiding the UI via the
+  // normal player params instead keeps it on the regular (higher-quality)
+  // streaming path.
   function toEmbedUrl(url) {
     var vimeo = url.match(/vimeo\.com\/(?:video\/)?(\d+)/);
-    if (vimeo) return 'https://player.vimeo.com/video/' + vimeo[1] + '?background=1&autoplay=1&loop=1&muted=1';
+    if (vimeo) {
+      return 'https://player.vimeo.com/video/' + vimeo[1] +
+        '?autoplay=1&loop=1&muted=1&controls=0&title=0&byline=0&portrait=0';
+    }
     var youtube = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([\w-]+)/);
     if (youtube) {
       var id = youtube[1];
