@@ -38,8 +38,9 @@
     {
       "type": "photo-video",
       "image": "/assets/images/uploads/unnamed.jpg",
-      "videoUrl": "https://vimeo.com/1228187458?share=copy&fl=sv&fe=ci",
-      "caption": "The prototype was tested outdoors over two seasons to observe its response to wind, weather and freezing temperatures."
+      "videoUrl": "https://vimeo.com/1228192915?share=copy&fl=sv&fe=ci",
+      "caption": "The prototype was tested outdoors over two seasons to observe its response to wind, weather and freezing temperatures.",
+      "videoLabel": ""
     },
     {
       "type": "full",
@@ -67,7 +68,7 @@
   "result": {
     "heading": "The Result",
     "bodyBlack": "A modular urban cooling spot that combines shade, evaporative cooling and water to create a more comfortable microclimate. Individual ceramic elements can be replaced, allowing the system to adapt, be maintained and evolve over time.",
-    "bodyMuted": "."
+    "bodyMuted": " "
   },
   "problem": {
     "heading": "The Problem",
