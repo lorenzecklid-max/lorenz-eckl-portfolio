@@ -1,28 +1,56 @@
 {
-  "slug": "terra",
+  "heroImage": "/assets/images/uploads/reoa_mak_morizfischer_52-kopie.jpg",
   "eyebrow": "Terra",
-  "headline": "An urban cooling spot for public spaces in a warming city.",
   "keywordsLabel": "Keywords",
-  "keywords": ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"],
-  "specsLabel": "Eckdaten",
-  "specs": ["Kooperationsprojekt", "2024"],
-  "heroImage": "",
-  "problem": {
-    "heading": "The Problem",
-    "body": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
-  },
+  "keywords": [
+    "Urban Cooling",
+    "Ceramics",
+    "Passive Cooling"
+  ],
+  "slug": "terra",
+  "gallery": [
+    {
+      "type": "video",
+      "image": "",
+      "image2": "",
+      "caption": "",
+      "videoLabel": "",
+      "videoUrl": ""
+    },
+    {
+      "type": "pair",
+      "image": "",
+      "image2": "",
+      "caption": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
+      "videoLabel": "",
+      "videoUrl": ""
+    },
+    {
+      "type": "pair",
+      "image": "",
+      "image2": "",
+      "caption": "Sed diam nonumy eirmod tempor invidunt ut labore et dolore.",
+      "videoLabel": "",
+      "videoUrl": ""
+    }
+  ],
+  "headline": "Urban Cooling Spot",
   "idea": {
     "heading": "The Idea",
-    "body": "Sed diam voluptua, at vero eos et accusam et justo duo dolores et ea rebum.<br><br>Stet clita kasd gubergren, no sea takimata sanctus est."
+    "body": "Terra explores how porous ceramics and water can create a simple, passive cooling system for urban spaces. Rainwater is absorbed by the ceramic elements and slowly released through evaporation, cooling the surrounding air while the structure provides shade."
   },
-  "gallery": [
-    { "type": "full", "image": "", "image2": "", "caption": "", "videoLabel": "", "videoUrl": "" },
-    { "type": "pair", "image": "", "image2": "", "caption": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.", "videoLabel": "", "videoUrl": "" },
-    { "type": "pair", "image": "", "image2": "", "caption": "Sed diam nonumy eirmod tempor invidunt ut labore et dolore.", "videoLabel": "", "videoUrl": "" }
+  "specs": [
+    "Student Project",
+    "2023"
   ],
+  "specsLabel": "Eckdaten",
   "result": {
     "heading": "The Result",
-    "bodyBlack": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.",
-    "bodyMuted": "Ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+    "bodyBlack": "A modular urban cooling spot that combines shade, evaporative cooling and water to create a more comfortable microclimate. Individual ceramic elements can be replaced, allowing the system to adapt, be maintained and evolve over time.",
+    "bodyMuted": "."
+  },
+  "problem": {
+    "heading": "The Problem",
+    "body": "Cities are increasingly affected by heat, while sealed surfaces and a lack of vegetation intensify local heat build-up. Public spaces often provide little protection from direct sunlight and high temperatures."
   }
 }
