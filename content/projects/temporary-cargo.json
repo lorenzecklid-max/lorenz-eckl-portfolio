@@ -10,12 +10,9 @@
   "slug": "temporary-cargo",
   "gallery": [
     {
-      "type": "full",
-      "image": "",
-      "image2": "",
-      "caption": "",
-      "videoLabel": "",
-      "videoUrl": "https://vimeo.com/1228027926?fl=ip&fe=ec"
+      "type": "video",
+      "videoLabel": "Fusion Falt video",
+      "videoUrl": "https://vimeo.com/1228038919?share=copy&fl=sv&fe=ci"
     },
     {
       "type": "pair",
@@ -42,7 +39,7 @@
       "image2": "",
       "caption": "Thorough limit testing to find the right balance between weight and stability.",
       "videoLabel": "Limit Testing",
-      "videoUrl": "https://vimeo.com/1228017699?fl=ip&fe=ec",
+      "videoUrl": "https://vimeo.com/1228017699?share=copy&fl=sv&fe=ci",
       "videoUrl2": ""
     },
     {
@@ -67,8 +64,8 @@
       "image2": "",
       "caption": "My first trip to Spar",
       "videoLabel": "",
-      "videoUrl": "https://vimeo.com/1228018700?fl=ip&fe=ec",
-      "videoUrl2": "https://vimeo.com/1228018700?fl=ip&fe=ec"
+      "videoUrl": "",
+      "videoUrl2": "https://vimeo.com/1228018700?share=copy&fl=sv&fe=ci"
     },
     {
       "image": "/assets/images/uploads/bike-gesamt-high-rez.png",
