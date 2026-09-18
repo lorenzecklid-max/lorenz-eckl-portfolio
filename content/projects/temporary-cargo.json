@@ -28,10 +28,10 @@
     {
       "type": "pair",
       "image": "/assets/images/cs-jig.jpg",
-      "image2": "/assets/images/cs-clamp.jpg",
+      "image2": "",
       "caption": "The Frame is made of lightweight alluminium for easy transport.",
       "videoLabel": "",
-      "videoUrl": ""
+      "videoUrl": "https://vimeo.com/1228018980?fl=ip&fe=ec"
     },
     {
       "type": "pair",
@@ -47,7 +47,7 @@
       "image2": "",
       "caption": "",
       "videoLabel": "Faltvideo",
-      "videoUrl": "https://vimeo.com/1225608390"
+      "videoUrl": "https://vimeo.com/1225608390?share=copy&fl=sv&fe=ci"
     },
     {
       "type": "pair",
@@ -60,10 +60,10 @@
     {
       "type": "pair",
       "image": "/assets/images/cs-grocery.jpg",
-      "image2": "/assets/images/cs-cyclist.jpg",
+      "image2": "",
       "caption": "My first trip to Spar",
       "videoLabel": "",
-      "videoUrl": ""
+      "videoUrl": "https://vimeo.com/1228018700?fl=ip&fe=ec"
     },
     {
       "type": "pair",
