@@ -143,16 +143,26 @@
   function buildVideoFrame(url, label, offsetY) {
     if (url) {
       var frame = C.el('div', 'video-embed-frame');
-      var iframe = document.createElement('iframe');
-      iframe.className = 'video-embed';
-      iframe.src = toEmbedUrl(url);
-      iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
-      iframe.setAttribute('allowfullscreen', '');
-      iframe.setAttribute('loading', 'lazy');
-      frame.appendChild(iframe);
-      if (offsetY) applyVerticalBias(iframe, offsetY);
+      // Wait for the real aspect ratio before creating the <iframe> at
+      // all, rather than building it immediately and resizing it once the
+      // ratio arrives. Vimeo/YouTube pick their streaming quality once,
+      // based on the player's size at that moment -- resizing the iframe
+      // afterward doesn't make it re-request a sharper stream, so a
+      // heavily-cropped clip (small at first, then zoomed way in) ended up
+      // visibly soft even though the source was high-res. Building the
+      // iframe already at its final size avoids that entirely; the frame
+      // just shows empty (background color) for the one network round-trip
+      // this takes.
       fetchAspectRatio(url).then(function (ratio) {
+        var iframe = document.createElement('iframe');
+        iframe.className = 'video-embed';
+        iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.setAttribute('loading', 'lazy');
+        if (offsetY) applyVerticalBias(iframe, offsetY);
         if (ratio) applyCoverFit(iframe, getFrameAspectRatio(frame), ratio);
+        iframe.src = toEmbedUrl(url);
+        frame.appendChild(iframe);
       });
       return frame;
     }
