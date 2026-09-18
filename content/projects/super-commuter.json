@@ -42,7 +42,19 @@
     {
       "type": "pair",
       "image": "/assets/images/uploads/taschenroller-detail-unten-kopie.png",
-      "image2": "/assets/images/uploads/taschenroller-gesamt-front-kopie.png"
+      "image2": "/assets/images/uploads/taschenroller-gesamt-front-kopie-recovered.png",
+      "caption": "The final construction combines aluminium components with a lightweight carbon-fibre handlebar, concentrating material only where it is structurally required.  1.4 KG  total weight"
+    },
+    {
+      "type": "photo-video",
+      "videoUrl": "https://vimeo.com/1228208732?fl=ip&fe=ec",
+      "videoUrl2": "",
+      "image": "/assets/images/uploads/taschenroller-detail-lenker-kopie.png"
+    },
+    {
+      "type": "full",
+      "image": "/assets/images/uploads/taschenroller-detail-rucksack-kopie.png",
+      "caption": "Unlike conventional folding scooters, TaschenRoller was developed around the moments when it is not being ridden."
     }
   ],
   "headline": "An ultra-light kick scooter designed to go wherever you go.",
@@ -57,8 +69,8 @@
   "specsLabel": "Eckdaten",
   "result": {
     "heading": "The Result",
-    "bodyBlack": "Taschen Roller reduces the kick scooter to its essential components: two wheels, a frame and a handlebar.\n\nThe result is an ultra-light, compact vehicle designed for short urban distances and the first and last mile — small enough to be carried when it is no longer needed.",
-    "bodyMuted": " "
+    "bodyBlack": "Taschen Roller reduces the kick scooter to its essential components: two wheels, a frame and a handlebar.\n\n",
+    "bodyMuted": "The result is an ultra-light, compact vehicle designed for short urban distances and the first and last mile — small enough to be carried when it is no longer needed."
   },
   "problem": {
     "heading": "The Problem",
