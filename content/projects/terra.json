@@ -38,7 +38,8 @@
     {
       "type": "photo-video",
       "image": "/assets/images/uploads/unnamed.jpg",
-      "videoUrl": "https://vimeo.com/1228187458?share=copy&fl=sv&fe=ci"
+      "videoUrl": "https://vimeo.com/1228187458?share=copy&fl=sv&fe=ci",
+      "caption": "The prototype was tested outdoors over two seasons to observe its response to wind, weather and freezing temperatures."
     },
     {
       "type": "full",
