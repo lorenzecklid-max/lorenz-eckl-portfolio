@@ -33,15 +33,16 @@
       "videoLabel": "Schweißen",
       "videoUrl": "https://vimeo.com/1228018980?fl=ip&fe=ec",
       "videoLabel2": "Biegen",
-      "videoUrl2": ""
+      "videoUrl2": "https://vimeo.com/1228020684?fl=ip&fe=ec"
     },
     {
       "type": "pair",
       "image": "/assets/images/cs-bracket.jpg",
-      "image2": "/assets/images/cs-welding.jpg",
+      "image2": "",
       "caption": "Thorough limit testing to find the right balance between weight and stability.",
       "videoLabel": "",
-      "videoUrl": ""
+      "videoUrl": "",
+      "videoUrl2": "https://vimeo.com/1228017699?fl=ip&fe=ec"
     },
     {
       "type": "video",
@@ -66,14 +67,6 @@
       "caption": "My first trip to Spar",
       "videoLabel": "",
       "videoUrl": "https://vimeo.com/1228018700?fl=ip&fe=ec"
-    },
-    {
-      "type": "pair",
-      "image": "/assets/images/cs-auditorium.jpg",
-      "image2": "/assets/images/cs-crate.jpg",
-      "caption": "",
-      "videoLabel": "",
-      "videoUrl": ""
     }
   ],
   "headline": "A bicycle trailer that is always there when you need it.",
