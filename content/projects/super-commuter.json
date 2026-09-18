@@ -11,11 +11,16 @@
   "gallery": [
     {
       "type": "full",
-      "image": "/assets/images/uploads/id_2023w_vordiplom_lorenz_eckl_midterm.002.jpeg",
-      "image2": "/assets/images/uploads/id_2023w_vordiplom_lorenz_eckl_midterm.001.jpeg",
-      "caption": "",
+      "image": "/assets/images/uploads/xcvbbb.png",
+      "image2": "",
+      "caption": "Early iterations explored how reducing and repositioning the footboard could significantly shorten the scooter while maintaining a usable riding position.",
       "videoLabel": "",
       "videoUrl": ""
+    },
+    {
+      "type": "full",
+      "image": "/assets/images/uploads/cvbbbbb.png",
+      "caption": "Early iterations explored how reducing and repositioning the footboard could significantly shorten the scooter while maintaining a usable riding position."
     },
     {
       "type": "pair",
