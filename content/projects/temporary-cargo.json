@@ -26,12 +26,14 @@
       "videoUrl": ""
     },
     {
-      "type": "pair",
-      "image": "/assets/images/cs-jig.jpg",
+      "type": "video-pair",
+      "image": "",
       "image2": "",
       "caption": "The Frame is made of lightweight alluminium for easy transport.",
-      "videoLabel": "",
-      "videoUrl": "https://vimeo.com/1228018980?fl=ip&fe=ec"
+      "videoLabel": "Schweißen",
+      "videoUrl": "https://vimeo.com/1228018980?fl=ip&fe=ec",
+      "videoLabel2": "Biegen",
+      "videoUrl2": ""
     },
     {
       "type": "pair",
