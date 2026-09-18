@@ -59,7 +59,7 @@
   // matching the gallery images around it, no click required.
   function toEmbedUrl(url) {
     var vimeo = url.match(/vimeo\.com\/(?:video\/)?(\d+)/);
-    if (vimeo) return 'https://player.vimeo.com/video/' + vimeo[1] + '?background=1';
+    if (vimeo) return 'https://player.vimeo.com/video/' + vimeo[1] + '?background=1&autoplay=1&loop=1&muted=1';
     var youtube = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([\w-]+)/);
     if (youtube) {
       var id = youtube[1];
@@ -112,9 +112,23 @@
     }
   }
 
+  // Shifts which part of the (already cover-cropped) video is visible,
+  // vertically -- e.g. a portrait clip covering a wide mask crops most
+  // of its height away, and the centered default may cut off the actual
+  // subject. offsetY is "percent shifted up" as entered in the CMS (0 =
+  // centered/default, positive = show more of the top of the clip).
+  function applyVerticalBias(iframe, offsetY) {
+    var y = 50 - (Number(offsetY) || 0);
+    if (y < 0) y = 0;
+    if (y > 100) y = 100;
+    iframe.style.top = y + '%';
+    iframe.style.left = '50%';
+    iframe.style.transform = 'translate(-50%, -' + y + '%)';
+  }
+
   // Builds either a live, autoplaying embed (URL given) or a placeholder
   // tile (no URL yet) -- shared by single-video and side-by-side blocks.
-  function buildVideoFrame(url, label) {
+  function buildVideoFrame(url, label, offsetY) {
     if (url) {
       var frame = C.el('div', 'video-embed-frame');
       var iframe = document.createElement('iframe');
@@ -124,6 +138,7 @@
       iframe.setAttribute('allowfullscreen', '');
       iframe.setAttribute('loading', 'lazy');
       frame.appendChild(iframe);
+      if (offsetY) applyVerticalBias(iframe, offsetY);
       fetchAspectRatio(url).then(function (ratio) {
         if (ratio) applyCoverFit(iframe, 16 / 9, ratio);
       });
@@ -139,7 +154,7 @@
   function buildGalleryItem(item) {
     if (item.type === 'video') {
       var vb = C.el('div', 'video-block');
-      vb.appendChild(buildVideoFrame(item.videoUrl, item.videoLabel));
+      vb.appendChild(buildVideoFrame(item.videoUrl, item.videoLabel, item.videoOffsetY));
       if (item.image) {
         vb.appendChild(C.mediaEl(item.image, 'cs-hero-img', '', { width: 1600 }));
       }
@@ -149,8 +164,8 @@
     if (item.type === 'video-pair') {
       var vwrap = C.el('div', 'gallery-block');
       var vgallery = C.el('div', 'gallery');
-      vgallery.appendChild(buildVideoFrame(item.videoUrl, item.videoLabel));
-      vgallery.appendChild(buildVideoFrame(item.videoUrl2, item.videoLabel2));
+      vgallery.appendChild(buildVideoFrame(item.videoUrl, item.videoLabel, item.videoOffsetY));
+      vgallery.appendChild(buildVideoFrame(item.videoUrl2, item.videoLabel2, item.videoOffsetY2));
       vwrap.appendChild(vgallery);
       if (item.caption) {
         var vcaption = C.el('span', 'gallery-caption');
