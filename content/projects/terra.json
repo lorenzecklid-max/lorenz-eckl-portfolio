@@ -10,26 +10,26 @@
   "slug": "terra",
   "gallery": [
     {
-      "type": "full",
+      "type": "photo-video",
       "image": "/assets/images/uploads/_mg_8031.png",
       "image2": "",
       "caption": "Clay samples with different firing temperatures and porosities were tested to understand their water absorption and evaporation performance.",
       "videoLabel": "",
-      "videoUrl": ""
+      "videoUrl": "https://vimeo.com/1228111032?share=copy&fl=sv&fe=ci"
     },
     {
-      "type": "pair",
-      "image": "",
+      "type": "photo-video",
+      "image": "/assets/images/uploads/img_0246.heic",
       "image2": "",
-      "caption": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
+      "caption": "The ceramic elements are extruded through a custom-made die, allowing the same profile to be reproduced efficiently and consistently.",
       "videoLabel": "",
-      "videoUrl": ""
+      "videoUrl": "https://vimeo.com/1228111966?share=copy&fl=sv&fe=ci"
     },
     {
       "type": "pair",
-      "image": "",
+      "image": "/assets/images/uploads/img_9958.jpg",
       "image2": "",
-      "caption": "Sed diam nonumy eirmod tempor invidunt ut labore et dolore.",
+      "caption": "A custom die defines the geometry of each ceramic element and enables straightforward serial production.",
       "videoLabel": "",
       "videoUrl": ""
     },
