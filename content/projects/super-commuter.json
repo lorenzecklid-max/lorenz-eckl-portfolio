@@ -23,20 +23,21 @@
       "caption": "Early iterations explored how reducing and repositioning the footboard could significantly shorten the scooter while maintaining a usable riding position."
     },
     {
-      "type": "pair",
+      "type": "video",
       "image": "",
       "image2": "",
-      "caption": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
+      "caption": "",
       "videoLabel": "",
-      "videoUrl": ""
+      "videoUrl": "https://vimeo.com/1228207463?fl=ip&fe=ec"
     },
     {
-      "type": "pair",
+      "type": "video-pair",
       "image": "",
       "image2": "",
-      "caption": "Sed diam nonumy eirmod tempor invidunt ut labore et dolore.",
+      "caption": "A plug-in assembly system allows the scooter to transition between a rideable vehicle and a compact object for transport.",
       "videoLabel": "",
-      "videoUrl": ""
+      "videoUrl": "https://vimeo.com/1228208211?fl=ip&fe=ec",
+      "videoUrl2": "https://vimeo.com/1228207653?fl=ip&fe=ec"
     }
   ],
   "headline": "An ultra-light kick scooter designed to go wherever you go.",
