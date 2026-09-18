@@ -69,30 +69,49 @@
     return url;
   }
 
+  // Builds either a live, autoplaying embed (URL given) or a placeholder
+  // tile (no URL yet) -- shared by single-video and side-by-side blocks.
+  function buildVideoFrame(url, label) {
+    if (url) {
+      var frame = C.el('div', 'video-embed-frame');
+      var iframe = document.createElement('iframe');
+      iframe.className = 'video-embed';
+      iframe.src = toEmbedUrl(url);
+      iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('loading', 'lazy');
+      frame.appendChild(iframe);
+      return frame;
+    }
+    var ph = C.el('div', 'video-placeholder checker');
+    var labelEl = document.createElement('span');
+    labelEl.textContent = label || 'Video';
+    ph.appendChild(labelEl);
+    return ph;
+  }
+
   function buildGalleryItem(item) {
     if (item.type === 'video') {
       var vb = C.el('div', 'video-block');
-      if (item.videoUrl) {
-        var frame = C.el('div', 'video-embed-frame');
-        var iframe = document.createElement('iframe');
-        iframe.className = 'video-embed';
-        iframe.src = toEmbedUrl(item.videoUrl);
-        iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
-        iframe.setAttribute('allowfullscreen', '');
-        iframe.setAttribute('loading', 'lazy');
-        frame.appendChild(iframe);
-        vb.appendChild(frame);
-      } else {
-        var ph = C.el('div', 'video-placeholder checker');
-        var label = document.createElement('span');
-        label.textContent = item.videoLabel || 'Video';
-        ph.appendChild(label);
-        vb.appendChild(ph);
-      }
+      vb.appendChild(buildVideoFrame(item.videoUrl, item.videoLabel));
       if (item.image) {
         vb.appendChild(C.mediaEl(item.image, 'cs-hero-img', '', { width: 1600 }));
       }
       return vb;
+    }
+
+    if (item.type === 'video-pair') {
+      var vwrap = C.el('div', 'gallery-block');
+      var vgallery = C.el('div', 'gallery');
+      vgallery.appendChild(buildVideoFrame(item.videoUrl, item.videoLabel));
+      vgallery.appendChild(buildVideoFrame(item.videoUrl2, item.videoLabel2));
+      vwrap.appendChild(vgallery);
+      if (item.caption) {
+        var vcaption = C.el('span', 'gallery-caption');
+        vcaption.textContent = item.caption;
+        vwrap.appendChild(vcaption);
+      }
+      return vwrap;
     }
 
     var wrap = C.el('div', 'gallery-block');

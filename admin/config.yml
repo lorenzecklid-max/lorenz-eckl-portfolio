@@ -162,6 +162,7 @@ collections:
                   - { label: "One full-width image", value: "full" }
                   - { label: "Two images side by side", value: "pair" }
                   - { label: "Video", value: "video" }
+                  - { label: "Two videos side by side", value: "video-pair" }
               - label: "Image"
                 name: "image"
                 widget: "image"
@@ -173,11 +174,20 @@ collections:
                 required: false
               - { label: "Caption (optional, shown in italics)", name: "caption", widget: "string", required: false }
               - { label: "Video placeholder label (only used while videoUrl is empty)", name: "videoLabel", widget: "string", required: false }
-              - label: "Video URL (only for 'Video' blocks)"
+              - label: "Video URL (for 'Video' blocks, or the left video of 'Two videos side by side')"
                 name: "videoUrl"
                 widget: "string"
                 required: false
                 hint: "Paste any YouTube or Vimeo link (e.g. the one from the Share button). Leave empty to show a placeholder box instead."
+              - label: "Second video placeholder label (only for 'two videos side by side', used while its URL is empty)"
+                name: "videoLabel2"
+                widget: "string"
+                required: false
+              - label: "Second video URL (only for 'two videos side by side' -- this is the right-hand video)"
+                name: "videoUrl2"
+                widget: "string"
+                required: false
+                hint: "Paste any YouTube or Vimeo link. Leave empty to show a placeholder box instead."
           - label: "The Result"
             name: "result"
             widget: "object"
@@ -231,6 +241,7 @@ collections:
                   - { label: "One full-width image", value: "full" }
                   - { label: "Two images side by side", value: "pair" }
                   - { label: "Video", value: "video" }
+                  - { label: "Two videos side by side", value: "video-pair" }
               - label: "Image"
                 name: "image"
                 widget: "image"
@@ -242,11 +253,20 @@ collections:
                 required: false
               - { label: "Caption (optional, shown in italics)", name: "caption", widget: "string", required: false }
               - { label: "Video placeholder label (only used while videoUrl is empty)", name: "videoLabel", widget: "string", required: false }
-              - label: "Video URL (only for 'Video' blocks)"
+              - label: "Video URL (for 'Video' blocks, or the left video of 'Two videos side by side')"
                 name: "videoUrl"
                 widget: "string"
                 required: false
                 hint: "Paste any YouTube or Vimeo link (e.g. the one from the Share button). Leave empty to show a placeholder box instead."
+              - label: "Second video placeholder label (only for 'two videos side by side', used while its URL is empty)"
+                name: "videoLabel2"
+                widget: "string"
+                required: false
+              - label: "Second video URL (only for 'two videos side by side' -- this is the right-hand video)"
+                name: "videoUrl2"
+                widget: "string"
+                required: false
+                hint: "Paste any YouTube or Vimeo link. Leave empty to show a placeholder box instead."
           - label: "The Result"
             name: "result"
             widget: "object"
@@ -300,6 +320,7 @@ collections:
                   - { label: "One full-width image", value: "full" }
                   - { label: "Two images side by side", value: "pair" }
                   - { label: "Video", value: "video" }
+                  - { label: "Two videos side by side", value: "video-pair" }
               - label: "Image"
                 name: "image"
                 widget: "image"
@@ -311,11 +332,20 @@ collections:
                 required: false
               - { label: "Caption (optional, shown in italics)", name: "caption", widget: "string", required: false }
               - { label: "Video placeholder label (only used while videoUrl is empty)", name: "videoLabel", widget: "string", required: false }
-              - label: "Video URL (only for 'Video' blocks)"
+              - label: "Video URL (for 'Video' blocks, or the left video of 'Two videos side by side')"
                 name: "videoUrl"
                 widget: "string"
                 required: false
                 hint: "Paste any YouTube or Vimeo link (e.g. the one from the Share button). Leave empty to show a placeholder box instead."
+              - label: "Second video placeholder label (only for 'two videos side by side', used while its URL is empty)"
+                name: "videoLabel2"
+                widget: "string"
+                required: false
+              - label: "Second video URL (only for 'two videos side by side' -- this is the right-hand video)"
+                name: "videoUrl2"
+                widget: "string"
+                required: false
+                hint: "Paste any YouTube or Vimeo link. Leave empty to show a placeholder box instead."
           - label: "The Result"
             name: "result"
             widget: "object"
