@@ -19,12 +19,13 @@
     },
     {
       "type": "full",
-      "image": "/assets/images/uploads/9.-präsi-finals.004.jpeg",
-      "image2": ""
+      "image": "/assets/images/uploads/bildschirmfoto-2026-09-18-um-19.35.46.png"
     },
     {
-      "type": "full",
-      "image": "/assets/images/uploads/bildschirmfoto-2026-09-18-um-19.35.46.png"
+      "type": "pair",
+      "image": "/assets/images/uploads/bildschirmfoto-2026-09-18-um-19.35.46.png",
+      "image2": "/assets/images/uploads/lorenz_eckl_terra_04_500kb.jpg",
+      "caption": "The material research was translated into a ceramic profile designed to hold water while maximizing the wet surface exposed to airflow, supporting continuous evaporative cooling."
     },
     {
       "type": "photo-video",
