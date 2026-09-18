@@ -11,8 +11,8 @@
   "gallery": [
     {
       "type": "full",
-      "image": "",
-      "image2": "",
+      "image": "/assets/images/uploads/id_2023w_vordiplom_lorenz_eckl_midterm.002.jpeg",
+      "image2": "/assets/images/uploads/id_2023w_vordiplom_lorenz_eckl_midterm.001.jpeg",
       "caption": "",
       "videoLabel": "",
       "videoUrl": ""
@@ -37,7 +37,7 @@
   "headline": "An ultra-light kick scooter designed to go wherever you go.",
   "idea": {
     "heading": "The Idea",
-    "body": "At vero eos et accusam et justo duo dolores et ea rebum.<br><br>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum."
+    "body": "How far can a kick scooter be reduced while remaining fully functional?\n\nTaschenRoller explores the minimum components and dimensions needed for a rideable scooter — with the goal of creating a vehicle light and compact enough to be carried whenever it is not in use."
   },
   "specs": [
     "Pre-Diploma Project",
@@ -51,6 +51,6 @@
   },
   "problem": {
     "heading": "The Problem",
-    "body": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+    "body": "Public transport efficiently covers longer distances, but the first and last mile often remains inconvenient. Kick scooters can bridge this gap, yet conventional models become bulky objects that have to be carried, stored or left behind once the ride is over."
   }
 }
