@@ -177,7 +177,7 @@ collections:
                 name: "videoUrl"
                 widget: "string"
                 required: false
-                hint: "Paste a YouTube/Vimeo embed link. Leave empty to show a placeholder box instead."
+                hint: "Paste any YouTube or Vimeo link (e.g. the one from the Share button). Leave empty to show a placeholder box instead."
           - label: "The Result"
             name: "result"
             widget: "object"
@@ -246,7 +246,7 @@ collections:
                 name: "videoUrl"
                 widget: "string"
                 required: false
-                hint: "Paste a YouTube/Vimeo embed link. Leave empty to show a placeholder box instead."
+                hint: "Paste any YouTube or Vimeo link (e.g. the one from the Share button). Leave empty to show a placeholder box instead."
           - label: "The Result"
             name: "result"
             widget: "object"
@@ -315,7 +315,7 @@ collections:
                 name: "videoUrl"
                 widget: "string"
                 required: false
-                hint: "Paste a YouTube/Vimeo embed link. Leave empty to show a placeholder box instead."
+                hint: "Paste any YouTube or Vimeo link (e.g. the one from the Share button). Leave empty to show a placeholder box instead."
           - label: "The Result"
             name: "result"
             widget: "object"

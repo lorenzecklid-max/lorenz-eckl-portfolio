@@ -49,13 +49,27 @@
     if (body) body.innerHTML = data.body;
   }
 
+  // People naturally paste whatever a video's "Share" button gives them
+  // (vimeo.com/123, youtube.com/watch?v=..., youtu.be/...), but only each
+  // site's dedicated *player* URL is actually allowed to be shown inside
+  // an iframe on another domain -- everything else gets silently blocked
+  // by the browser. Normalize to that player URL regardless of what was
+  // pasted, so the CMS field just works.
+  function toEmbedUrl(url) {
+    var vimeo = url.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+    if (vimeo) return 'https://player.vimeo.com/video/' + vimeo[1];
+    var youtube = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([\w-]+)/);
+    if (youtube) return 'https://www.youtube.com/embed/' + youtube[1];
+    return url;
+  }
+
   function buildGalleryItem(item) {
     if (item.type === 'video') {
       var vb = C.el('div', 'video-block');
       if (item.videoUrl) {
         var iframe = document.createElement('iframe');
         iframe.className = 'video-embed';
-        iframe.src = item.videoUrl;
+        iframe.src = toEmbedUrl(item.videoUrl);
         iframe.setAttribute('allowfullscreen', '');
         iframe.setAttribute('loading', 'lazy');
         vb.appendChild(iframe);
