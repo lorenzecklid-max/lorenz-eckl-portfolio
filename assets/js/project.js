@@ -158,6 +158,11 @@
       if (item.image) {
         vb.appendChild(C.mediaEl(item.image, 'cs-hero-img', '', { width: 1600 }));
       }
+      if (item.caption) {
+        var vbcaption = C.el('span', 'gallery-caption');
+        vbcaption.textContent = item.caption;
+        vb.appendChild(vbcaption);
+      }
       return vb;
     }
 
