@@ -175,6 +175,28 @@
       return vwrap;
     }
 
+    if (item.type === 'photo-video') {
+      var pvwrap = C.el('div', 'gallery-block');
+      var pvgallery = C.el('div', 'gallery');
+      pvgallery.appendChild(C.mediaEl(item.image, '', '', { width: 800 }));
+      // The 'Video URL' field is the intended one, but this type used to
+      // not exist, so some entries got the clip pasted into 'Second video
+      // URL' instead while the CMS only offered the 'pair' (2-image) type
+      // -- fall back to that so those don't quietly stay blank.
+      pvgallery.appendChild(buildVideoFrame(
+        item.videoUrl || item.videoUrl2,
+        item.videoLabel || item.videoLabel2,
+        item.videoOffsetY || item.videoOffsetY2
+      ));
+      pvwrap.appendChild(pvgallery);
+      if (item.caption) {
+        var pvcaption = C.el('span', 'gallery-caption');
+        pvcaption.textContent = item.caption;
+        pvwrap.appendChild(pvcaption);
+      }
+      return pvwrap;
+    }
+
     var wrap = C.el('div', 'gallery-block');
     var galleryClass = item.type === 'full' ? 'gallery gallery--full' : 'gallery';
     var gallery = C.el('div', galleryClass);
