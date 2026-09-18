@@ -1,5 +1,5 @@
 {
-  "heroImage": "/assets/images/uploads/reoa_mak_morizfischer_52-kopie.jpg",
+  "heroImage": "/assets/images/uploads/reoa_mak_morizfischer_19-kopie.jpg",
   "eyebrow": "Terra",
   "keywordsLabel": "Keywords",
   "keywords": [
@@ -10,10 +10,10 @@
   "slug": "terra",
   "gallery": [
     {
-      "type": "video",
-      "image": "",
+      "type": "full",
+      "image": "/assets/images/uploads/_mg_8031.png",
       "image2": "",
-      "caption": "",
+      "caption": "Clay samples with different firing temperatures and porosities were tested to understand their water absorption and evaporation performance.",
       "videoLabel": "",
       "videoUrl": ""
     },
@@ -32,6 +32,9 @@
       "caption": "Sed diam nonumy eirmod tempor invidunt ut labore et dolore.",
       "videoLabel": "",
       "videoUrl": ""
+    },
+    {
+      "type": "full"
     }
   ],
   "headline": "Urban Cooling Spot",
