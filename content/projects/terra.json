@@ -36,6 +36,11 @@
       "videoUrl": "https://vimeo.com/1228111966?share=copy&fl=sv&fe=ci"
     },
     {
+      "type": "photo-video",
+      "image": "/assets/images/uploads/reoa_mak_morizfischer_54-kopie.jpg",
+      "videoUrl": "https://vimeo.com/1228125835?fl=ip&fe=ec"
+    },
+    {
       "type": "video-pair",
       "caption": "Beyond improving the local microclimate, Terra introduces water into the urban environment — creating small opportunities for insects and other urban life.",
       "videoUrl": "https://vimeo.com/1228124580?fl=ip&fe=ec",
