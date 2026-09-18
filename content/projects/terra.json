@@ -19,16 +19,16 @@
     },
     {
       "type": "photo-video",
-      "image": "/assets/images/uploads/img_0246.heic",
+      "image": "/assets/images/uploads/img_0244.jpeg",
       "image2": "",
       "caption": "The ceramic elements are extruded through a custom-made die, allowing the same profile to be reproduced efficiently and consistently.",
       "videoLabel": "",
       "videoUrl": "https://vimeo.com/1228111966?share=copy&fl=sv&fe=ci"
     },
     {
-      "type": "pair",
-      "image": "/assets/images/uploads/img_9958.jpg",
-      "image2": "",
+      "type": "full",
+      "image": "/assets/images/uploads/lorenz_eckl_terra_04_500kb.jpg",
+      "image2": "/assets/images/uploads/lorenz_eckl_terra_04_500kb.jpg",
       "caption": "A custom die defines the geometry of each ceramic element and enables straightforward serial production.",
       "videoLabel": "",
       "videoUrl": ""
