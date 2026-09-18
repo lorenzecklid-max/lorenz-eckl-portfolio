@@ -27,11 +27,11 @@
     },
     {
       "caption": "The Frame is made of lightweight alluminium for easy transport.",
-      "videoOffsetY": 30,
+      "videoOffsetY": 10,
       "videoUrl": "https://vimeo.com/1228018980?fl=ip&fe=ec",
       "image2": "",
-      "videoLabel2": "Biegen",
-      "videoLabel": "Schweißen",
+      "videoLabel2": "schweißen",
+      "videoLabel": "biegen",
       "type": "video-pair",
       "image": "",
       "videoUrl2": "https://vimeo.com/1228020684?fl=ip&fe=ec"
@@ -41,9 +41,9 @@
       "image": "/assets/images/cs-bracket.jpg",
       "image2": "",
       "caption": "Thorough limit testing to find the right balance between weight and stability.",
-      "videoLabel": "",
-      "videoUrl": "",
-      "videoUrl2": "https://vimeo.com/1228017699?fl=ip&fe=ec"
+      "videoLabel": "Limit Testing",
+      "videoUrl": "https://vimeo.com/1228017699?fl=ip&fe=ec",
+      "videoUrl2": ""
     },
     {
       "type": "video",
@@ -67,7 +67,8 @@
       "image2": "",
       "caption": "My first trip to Spar",
       "videoLabel": "",
-      "videoUrl": "https://vimeo.com/1228018700?fl=ip&fe=ec"
+      "videoUrl": "https://vimeo.com/1228018700?fl=ip&fe=ec",
+      "videoUrl2": "https://vimeo.com/1228018700?fl=ip&fe=ec"
     },
     {
       "image": "/assets/images/uploads/bike-gesamt-high-rez.png",
