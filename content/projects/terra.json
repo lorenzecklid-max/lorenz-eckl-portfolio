@@ -18,9 +18,13 @@
       "videoUrl": "https://vimeo.com/1228111032?share=copy&fl=sv&fe=ci"
     },
     {
-      "type": "pair",
+      "type": "full",
       "image": "/assets/images/uploads/9.-präsi-finals.004.jpeg",
-      "image2": "/assets/images/uploads/bildschirmfoto-2026-09-18-um-19.35.46.png"
+      "image2": ""
+    },
+    {
+      "type": "full",
+      "image": "/assets/images/uploads/bildschirmfoto-2026-09-18-um-19.35.46.png"
     },
     {
       "type": "photo-video",
