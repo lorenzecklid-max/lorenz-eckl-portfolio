@@ -190,7 +190,7 @@ collections:
                 hint: "Paste any YouTube or Vimeo link. Leave empty to show a placeholder box instead."
               - label: "Video crop position (for the first/left video)"
                 name: "videoOffsetY"
-                widget: "number"
+                widget: "cropSlider"
                 required: false
                 min: -50
                 max: 50
@@ -198,7 +198,7 @@ collections:
                 hint: "Only matters for a portrait/vertical video, which gets zoomed in to fill the wide frame and can crop out the subject. 0 = centered (default). Positive = shift the crop up (show more of the top). Negative = shift it down."
               - label: "Video crop position (for the second/right video, 'two videos side by side' only)"
                 name: "videoOffsetY2"
-                widget: "number"
+                widget: "cropSlider"
                 required: false
                 min: -50
                 max: 50
@@ -285,7 +285,7 @@ collections:
                 hint: "Paste any YouTube or Vimeo link. Leave empty to show a placeholder box instead."
               - label: "Video crop position (for the first/left video)"
                 name: "videoOffsetY"
-                widget: "number"
+                widget: "cropSlider"
                 required: false
                 min: -50
                 max: 50
@@ -293,7 +293,7 @@ collections:
                 hint: "Only matters for a portrait/vertical video, which gets zoomed in to fill the wide frame and can crop out the subject. 0 = centered (default). Positive = shift the crop up (show more of the top). Negative = shift it down."
               - label: "Video crop position (for the second/right video, 'two videos side by side' only)"
                 name: "videoOffsetY2"
-                widget: "number"
+                widget: "cropSlider"
                 required: false
                 min: -50
                 max: 50
@@ -380,7 +380,7 @@ collections:
                 hint: "Paste any YouTube or Vimeo link. Leave empty to show a placeholder box instead."
               - label: "Video crop position (for the first/left video)"
                 name: "videoOffsetY"
-                widget: "number"
+                widget: "cropSlider"
                 required: false
                 min: -50
                 max: 50
@@ -388,7 +388,7 @@ collections:
                 hint: "Only matters for a portrait/vertical video, which gets zoomed in to fill the wide frame and can crop out the subject. 0 = centered (default). Positive = shift the crop up (show more of the top). Negative = shift it down."
               - label: "Video crop position (for the second/right video, 'two videos side by side' only)"
                 name: "videoOffsetY2"
-                widget: "number"
+                widget: "cropSlider"
                 required: false
                 min: -50
                 max: 50
