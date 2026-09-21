@@ -27,8 +27,8 @@
       "videoOffsetY": 10,
       "videoUrl": "https://vimeo.com/1228018980?fl=ip&fe=ec",
       "image2": "",
-      "videoLabel2": "schweißen",
-      "videoLabel": "biegen",
+      "videoLabel2": "welding",
+      "videoLabel": "bending",
       "type": "video-pair",
       "image": "",
       "videoUrl2": "https://vimeo.com/1228020684?fl=ip&fe=ec"
@@ -82,7 +82,7 @@
     "2026",
     "University of Applied Arts Vienna"
   ],
-  "specsLabel": "Eckdaten",
+  "specsLabel": "Details",
   "result": {
     "heading": "The Result",
     "bodyBlack": "A fully functional prototype that adds cargo capacity without compromising everyday use. Folded, Temporary Cargo functions as a rear rack. When needed, it unfolds into a single-wheel trailer with a 300 × 400 mm cargo platform.",
