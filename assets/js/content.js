@@ -51,15 +51,9 @@
     return ph;
   }
 
-  function tagVariantClass(variant) {
-    if (variant === 'dark') return 'tag tag--dark';
-    if (variant === 'gold') return 'tag tag--gold';
-    return 'tag';
-  }
-
   function renderTags(container, tags) {
     (tags || []).forEach(function (t) {
-      var span = el('span', tagVariantClass(t.variant));
+      var span = el('span', 'tag');
       span.textContent = t.label;
       container.appendChild(span);
     });

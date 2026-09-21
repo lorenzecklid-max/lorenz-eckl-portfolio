@@ -17,7 +17,7 @@
       "tags": [
         {
           "label": "Urban Mobility",
-          "variant": "dark"
+          "variant": "muted"
         },
         {
           "variant": "muted",
@@ -37,7 +37,7 @@
       "tags": [
         {
           "label": "Urban Mobility",
-          "variant": "dark"
+          "variant": "muted"
         },
         {
           "label": "Lightweight Design",
@@ -55,7 +55,7 @@
       "tagline": "Cooling urban spaces through water and evaporation.",
       "tags": [
         {
-          "variant": "gold",
+          "variant": "muted",
           "label": "Urban Cooling"
         },
         {
