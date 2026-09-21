@@ -3,7 +3,7 @@
   "location": "AUT, Wien",
   "email": "hello@lorenz-eckl.com",
   "links": {
-    "impressum": { "label": "Impressum", "href": "/impressum.html" },
-    "datenschutz": { "label": "Datenschutz", "href": "/datenschutz.html" }
+    "impressum": { "label": "Legal Notice", "href": "/impressum.html" },
+    "datenschutz": { "label": "Privacy Policy", "href": "/datenschutz.html" }
   }
 }
