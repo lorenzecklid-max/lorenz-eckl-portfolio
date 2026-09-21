@@ -416,13 +416,13 @@ img { display: block; max-width: 100%; }
   transition: max-width 0.3s ease, opacity 0.3s ease;
   white-space: nowrap;
 }
-.mail-link:hover .mail-arrow { max-width: 48px; opacity: 1; }
+.mail-link:hover .mail-arrow { max-width: 1.4em; opacity: 1; }
 .mail-text {
   transition: transform 0.3s ease;
   transform: translateX(0);
   display: inline-block;
 }
-.mail-link:hover .mail-text { transform: translateX(8px); }
+.mail-link:hover .mail-text { transform: translateX(1.4em); }
 
 /* ---------- footer ---------- */
 
