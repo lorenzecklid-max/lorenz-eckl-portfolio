@@ -98,46 +98,6 @@
       .catch(function () { return null; });
   }
 
-  // Loads Vimeo's official Player SDK once (only pages with a Vimeo embed
-  // pay for the extra script at all), so we can actually pause/play a clip
-  // rather than just leaving every autoplaying embed running forever.
-  var vimeoSdkPromise = null;
-  function loadVimeoSdk() {
-    if (window.Vimeo && window.Vimeo.Player) return Promise.resolve(window.Vimeo);
-    if (!vimeoSdkPromise) {
-      vimeoSdkPromise = new Promise(function (resolve, reject) {
-        var script = document.createElement('script');
-        script.src = 'https://player.vimeo.com/api/player.js';
-        script.onload = function () { resolve(window.Vimeo); };
-        script.onerror = reject;
-        document.head.appendChild(script);
-      });
-    }
-    return vimeoSdkPromise;
-  }
-
-  // A page can end up with a handful of looping, autoplaying clips on it.
-  // Left alone, every one of them keeps streaming even once scrolled
-  // completely out of view, which both wastes bandwidth and means several
-  // clips fight over the visitor's connection at once -- exactly the kind
-  // of contention that makes Vimeo's adaptive streaming drop quality on
-  // whichever one loses out. Pause a clip the moment it leaves the
-  // viewport and resume it once it's back, so only what's actually on
-  // screen is ever actively streaming.
-  function pauseWhenOffscreen(frame, iframe, url) {
-    if (!/vimeo\.com/.test(url)) return; // no SDK for YouTube here (unused today)
-    loadVimeoSdk().then(function (Vimeo) {
-      var player = new Vimeo.Player(iframe);
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          var action = entry.isIntersecting ? player.play() : player.pause();
-          action.catch(function () {});
-        });
-      }, { threshold: 0.25 });
-      observer.observe(frame);
-    }).catch(function () {});
-  }
-
   // Zooms/crops an absolutely-centered embed (see .video-embed-frame /
   // .video-embed in site.css) so it exactly covers a container of the
   // given aspect ratio, given the embedded content's real aspect ratio.
@@ -198,12 +158,10 @@
         iframe.className = 'video-embed';
         iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
         iframe.setAttribute('allowfullscreen', '');
-        iframe.setAttribute('loading', 'lazy');
         if (offsetY) applyVerticalBias(iframe, offsetY);
         if (ratio) applyCoverFit(iframe, getFrameAspectRatio(frame), ratio);
         iframe.src = toEmbedUrl(url);
         frame.appendChild(iframe);
-        pauseWhenOffscreen(frame, iframe, url);
       });
       return frame;
     }
